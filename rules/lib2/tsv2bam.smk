@@ -3,9 +3,9 @@
 
 rule tsv2bam:
     input:
-        "results/lib2_6frogs/stacks_denovo/sstacks/{sample}.matches.tsv.gz"
+        "results/lib2/stacks_denovo/sstacks/{sample}.matches.tsv.gz"
     output:
-        "results/lib2_6frogs/stacks_denovo/tsv2bam/{sample}.matches.bam"
+        "results/lib2/stacks_denovo/tsv2bam/{sample}.matches.bam"
     params:
         popmap=config["popmap"],
     conda:
@@ -15,13 +15,13 @@ rule tsv2bam:
         mem_mb=37400,
         time="24:00:00"
     log:
-        "results/lib2_6frogs/logs/stacks_denovo/tsv2bam/{sample}.log"
+        "results/lib2/logs/stacks_denovo/tsv2bam/{sample}.log"
     benchmark:
-        "results/lib2_6frogs/benchmarks/stacks_denovo/tsv2bam/{sample}.bmk"
+        "results/lib2/benchmarks/stacks_denovo/tsv2bam/{sample}.bmk"
     shell:
         " (tsv2bam				"
-        " -P results/lib2_6frogs/stacks_denovo/sstacks/	"
-        " -o results/lib2_6frogs/stacks_denovo/tsv2bam/	"    
-        " -R results/lib2_6frogs/process_radtags/   	"
+        " -P results/lib2/stacks_denovo/sstacks/	"
+        " -o results/lib2/stacks_denovo/tsv2bam/	"    
+        " -R results/lib2/process_radtags/   	"
         " -M {params.popmap} -t 10) 		"
         " 2> {log}				"

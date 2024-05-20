@@ -3,10 +3,10 @@
 
 rule populations:
     input:
-        "results/lib2_6frogs/stacks_denovo/gstacks/catalog.fa.gz",
-        "results/lib2_6frogs/stacks_denovo/gstacks/catalog.calls"
+        "results/lib2/stacks_denovo/gstacks/catalog.fa.gz",
+        "results/lib2/stacks_denovo/gstacks/catalog.calls"
     output:
-        "results/lib2_6frogs/populations/populations.snps.vcf"
+        "results/lib2/populations/populations.snps.vcf"
     params:
         popmap=config["popmap"],
     resources:
@@ -16,11 +16,11 @@ rule populations:
     conda:
         "stacks-2.65"
     log:
-        "results/lib2_6frogs/logs/populations/populations.log"
+        "results/lib2/logs/populations/populations.log"
     shell:
         " (populations				"
-        " -P results/lib2_6frogs/stacks_denovo/gstacks/ 	"
-        " -O results/lib2_6frogs/populations/ 		"
+        " -P results/lib2/stacks_denovo/gstacks/ 	"
+        " -O results/lib2/populations/ 		"
         " -M {params.popmap}			" 
         " -p 2 -r 0.5 --min-maf 0.1		"
         " --write-random-snp 			"
