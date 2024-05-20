@@ -1,8 +1,8 @@
-# Alpine slurm config file for lib2_6frogs
+# Alpine slurm config file for lib2
 
 executor: cluster-generic
 cluster-generic-submit-cmd:
-  mkdir -p results/lib2_6frogs/slurm_logs/{rule} &&
+  mkdir -p results/lib2/slurm_logs/{rule} &&
   sbatch
     --partition=amilan
     --cpus-per-task={threads}
@@ -10,8 +10,8 @@ cluster-generic-submit-cmd:
     --time={resources.time}
     --qos={resources.qos}
     --job-name=smk-{rule}-{wildcards}
-    --output=results/lib2_6frogs/slurm_logs/{rule}/{rule}-%j-{wildcards}.out
-    --error=results/lib2_6frogs/slurm_logs/{rule}/{rule}-%j-{wildcards}.err
+    --output=results/lib2/slurm_logs/{rule}/{rule}-%j-{wildcards}.out
+    --error=results/lib2/slurm_logs/{rule}/{rule}-%j-{wildcards}.err
     --parsable
 cluster-generic-status-cmd: status-sacct-robust.sh
 cluster-generic-cancel-cmd: scancel
@@ -20,7 +20,7 @@ default-resources:
   - time="08:00:00"
   - mem_mb=3740
   - qos="normal"
-  - tmpdir="results/lib2_6frogs/snake-tmp"
+  - tmpdir="results/lib2/snake-tmp"
 restart-times: 0
 max-jobs-per-second: 10
 max-status-checks-per-second: 50
