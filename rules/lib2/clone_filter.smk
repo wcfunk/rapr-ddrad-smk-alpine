@@ -8,7 +8,7 @@ rule clone_filter:
         "results/lib2/clone_filter/{sample}_2.2.fq.gz"
     resources:
         cpus=1,
-        mem_mb=30000,
+        mem_mb=3740,
         time="12:00:00"
     conda:
         "stacks-2.65"
