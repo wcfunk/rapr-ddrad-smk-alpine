@@ -13,7 +13,6 @@ cluster-generic-submit-cmd:
     --output=results/lib2/slurm_logs/{rule}/{rule}-%j-{wildcards}.out
     --error=results/lib2/slurm_logs/{rule}/{rule}-%j-{wildcards}.err
     --parsable
-    --gres=gpu: 2
 cluster-generic-status-cmd: status-sacct-robust.sh
 cluster-generic-cancel-cmd: scancel
 cluster-generic-cancel-nargs: 4000
@@ -21,6 +20,7 @@ default-resources:
   - time="08:00:00"
   - mem_mb=3740
   - qos="normal"
+  - gres="gpu: 2"
   - tmpdir="results/lib2/snake-tmp"
 restart-times: 0
 max-jobs-per-second: 10
