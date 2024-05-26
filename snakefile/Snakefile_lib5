@@ -1,17 +1,17 @@
-configfile: "rapr-ddrad-smk-alpine/config/config_lib2.yaml"
+configfile: "rapr-ddrad-smk-alpine/config/config_lib5.yaml"
 
-include: "../rules/lib2/common.smk"
+include: "../rules/lib5/common.smk"
 
-include: "../rules/lib2/clone_filter.smk"
+include: "../rules/lib5/clone_filter.smk"
 
-include: "../rules/lib2/process_radtags.smk"
-include: "../rules/lib2/rename_fastqs.smk"
+include: "../rules/lib5/process_radtags.smk"
+include: "../rules/lib5/rename_fastqs.smk"
 
 # Stacks de novo pipeline
-include: "../rules/lib2/ustacks.smk"
-include: "../rules/lib2/cstacks.smk"
-include: "../rules/lib2/sstacks.smk"
-include: "../rules/lib2/tsv2bam.smk"
-include: "../rules/lib2/gstacks.smk"
+include: "../rules/lib5/ustacks.smk"
+include: "../rules/lib5/cstacks.smk"
+include: "../rules/lib5/sstacks.smk"
+include: "../rules/lib5/tsv2bam.smk"
+include: "../rules/lib5/gstacks.smk"
 
-include: "../rules/lib2/populations.smk"
+include: "../rules/lib5/populations.smk"
