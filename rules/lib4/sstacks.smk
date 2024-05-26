@@ -2,12 +2,12 @@
 
 rule sstacks:
     input:
-        "results/lib2/stacks_denovo/cstacks/catalog.tags.tsv.gz",
-        "results/lib2/stacks_denovo/cstacks/catalog.snps.tsv.gz",
-        "results/lib2/stacks_denovo/cstacks/catalog.alleles.tsv.gz",
-        "results/lib2/stacks_denovo/cstacks/catalog.sample_list.tsv.gz"
+        "results/lib4/stacks_denovo/cstacks/catalog.tags.tsv.gz",
+        "results/lib4/stacks_denovo/cstacks/catalog.snps.tsv.gz",
+        "results/lib4/stacks_denovo/cstacks/catalog.alleles.tsv.gz",
+        "results/lib4/stacks_denovo/cstacks/catalog.sample_list.tsv.gz"
     output:
-        "results/lib2/stacks_denovo/sstacks/{sample}.matches.tsv.gz"
+        "results/lib4/stacks_denovo/sstacks/{sample}.matches.tsv.gz"
     params:
         popmap=config["popmap"],
     conda:
@@ -17,12 +17,12 @@ rule sstacks:
         mem_mb=37400,
         time="24:00:00"
     log:
-        "results/lib2/logs/stacks_denovo/sstacks/{sample}.log"
+        "results/lib4/logs/stacks_denovo/sstacks/{sample}.log"
     benchmark:
-        "results/lib2/benchmarks/stacks_denovo/sstacks/{sample}.bmk"
+        "results/lib4/benchmarks/stacks_denovo/sstacks/{sample}.bmk"
     shell:
         " (sstacks				"
-        " -P results/lib2/stacks_denovo/cstacks/	"
-        " -o results/lib2/stacks_denovo/sstacks/     "
+        " -P results/lib4/stacks_denovo/cstacks/	"
+        " -o results/lib4/stacks_denovo/sstacks/     "
         " -M {params.popmap} -p 10)		"
         " 2> {log}				"
