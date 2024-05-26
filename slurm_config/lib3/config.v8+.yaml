@@ -4,12 +4,11 @@ executor: cluster-generic
 cluster-generic-submit-cmd:
   mkdir -p results/lib3/slurm_logs/{rule} &&
   sbatch
-    --partition=aa100
+    --partition=amilan
     --cpus-per-task={threads}
     --mem={resources.mem_mb}
     --time={resources.time}
     --qos={resources.qos}
-    --gres={resources.gres}
     --job-name=smk-{rule}-{wildcards}
     --output=results/lib3/slurm_logs/{rule}/{rule}-%j-{wildcards}.out
     --error=results/lib3/slurm_logs/{rule}/{rule}-%j-{wildcards}.err
@@ -21,7 +20,6 @@ default-resources:
   - time="08:00:00"
   - mem_mb=3740
   - qos="normal"
-  - gres="gpu:2"
   - tmpdir="results/lib3/snake-tmp"
 restart-times: 0
 max-jobs-per-second: 10
