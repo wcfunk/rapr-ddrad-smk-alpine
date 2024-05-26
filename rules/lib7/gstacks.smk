@@ -3,10 +3,10 @@
 
 rule gstacks:
     input:
-        expand("results/lib2/stacks_denovo/tsv2bam/{s}.matches.bam", s=SAMPLES)
+        expand("results/lib7/stacks_denovo/tsv2bam/{s}.matches.bam", s=SAMPLES)
     output:
-        "results/lib2/stacks_denovo/gstacks/catalog.fa.gz",
-        "results/lib2/stacks_denovo/gstacks/catalog.calls"
+        "results/lib7/stacks_denovo/gstacks/catalog.fa.gz",
+        "results/lib7/stacks_denovo/gstacks/catalog.calls"
     params:
         popmap=config["popmap"],
     conda:
@@ -16,12 +16,12 @@ rule gstacks:
         mem=89760,
         time="24:00:00"
     log:
-        "results/lib2/logs/stacks_denovo/gstacks/gstacks.log"
+        "results/lib7/logs/stacks_denovo/gstacks/gstacks.log"
     benchmark:
-        "results/lib2/benchmarks/stacks_denovo/gstacks/gstacks.bmk"
+        "results/lib7/benchmarks/stacks_denovo/gstacks/gstacks.bmk"
     shell:
         " (gstacks				"
-        " -P results/lib2/stacks_denovo/tsv2bam/	"
-        " -O results/lib2/stacks_denovo/gstacks/	"
+        " -P results/lib7/stacks_denovo/tsv2bam/	"
+        " -O results/lib7/stacks_denovo/gstacks/	"
         " -M {params.popmap} -t 24)		"
         " 2> {log}				"

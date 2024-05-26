@@ -4,8 +4,8 @@ rule clone_filter:
     input:
         unpack(get_fastqs)
     output:
-        "results/lib2/clone_filter/{sample}_1.1.fq.gz",
-        "results/lib2/clone_filter/{sample}_2.2.fq.gz"
+        "results/lib3/clone_filter/{sample}_1.1.fq.gz",
+        "results/lib3/clone_filter/{sample}_2.2.fq.gz"
     resources:
         cpus=1,
         mem_mb=3740,
@@ -13,11 +13,11 @@ rule clone_filter:
     conda:
         "stacks-2.65"
     log:
-        "results/lib2/logs/clone_filter/{sample}.log"
+        "results/lib3/logs/clone_filter/{sample}.log"
     benchmark:
-        "results/lib2/benchmarks/clone_filter/{sample}.bmk"
+        "results/lib3/benchmarks/clone_filter/{sample}.bmk"
     shell:
         " (clone_filter -i gzfastq  "
         "       -1 {input.fq1} -2 {input.fq2}     "
         "       --inline-null --oligo-len-1 10    "
-        "       -o results/lib2/clone_filter/) 2> {log} "
+        "       -o results/lib3/clone_filter/) 2> {log} "
