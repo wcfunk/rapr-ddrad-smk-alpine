@@ -5,8 +5,8 @@ lib4	1	222282	fastqs/lib4/222282_1.fq.gz	fastqs/lib4/222282_2.fq.gz
 lib4	1	222293	fastqs/lib4/222293_1.fq.gz	fastqs/lib4/222293_2.fq.gz
 lib4	1	RAPR8_9_22_1	fastqs/lib4/RAPR8_9_22_1_1.fq.gz	fastqs/lib4/RAPR8_9_22_1_2.fq.gz
 lib4	1	RAPR8_9_22_2	fastqs/lib4/RAPR8_9_22_2_1.fq.gz	fastqs/lib4/RAPR8_9_22_2_2.fq.gz
-lib4	1	LJM26Jun18_2_RAPR	fastqs/lib4/LJM26Jun18_2_RAPR_1.fq.gz	fastqs/lib4/LJM26Jun18_2_RAPR_2.fq.gz
-lib4	1	LJM26Jun18_6_RAPR	fastqs/lib4/LJM26Jun18_6_RAPR_1.fq.gz	fastqs/lib4/LJM26Jun18_6_RAPR_2.fq.gz
+lib4	1	LJM26JUN18_2_RAPR	fastqs/lib4/LJM26JUN18_2_RAPR_1.fq.gz	fastqs/lib4/LJM26JUN18_2_RAPR_2.fq.gz
+lib4	1	LJM26JUN18_6_RAPR	fastqs/lib4/LJM26JUN18_6_RAPR_1.fq.gz	fastqs/lib4/LJM26JUN18_6_RAPR_2.fq.gz
 lib4	1	LJ8AUG19_3_RAPR_F	fastqs/lib4/LJ8AUG19_3_RAPR_F_1.fq.gz	fastqs/lib4/LJ8AUG19_3_RAPR_F_2.fq.gz
 lib4	1	222074	fastqs/lib4/222074_1.fq.gz	fastqs/lib4/222074_2.fq.gz
 lib4	1	211987	fastqs/lib4/211987_1.fq.gz	fastqs/lib4/211987_2.fq.gz
@@ -41,7 +41,7 @@ lib4	1	OSF_E401	fastqs/lib4/OSF_E401_1.fq.gz	fastqs/lib4/OSF_E401_2.fq.gz
 lib4	1	OSF_E403	fastqs/lib4/OSF_E403_1.fq.gz	fastqs/lib4/OSF_E403_2.fq.gz
 lib4	1	OSF_E404	fastqs/lib4/OSF_E404_1.fq.gz	fastqs/lib4/OSF_E404_2.fq.gz
 lib4	1	OSF_ERAAU_3	fastqs/lib4/OSF_ERAAU_3_1.fq.gz	fastqs/lib4/OSF_ERAAU_3_2.fq.gz
-lib4	1	17AUG22BeaverRACA3	fastqs/lib4/17AUG22BeaverRACA3_1.fq.gz	fastqs/lib4/17AUG22BeaverRACA3_2.fq.gz
+lib4	1	17AUG22BEAVERRACA3	fastqs/lib4/17AUG22BEAVERRACA3_1.fq.gz	fastqs/lib4/17AUG22BEAVERRACA3_2.fq.gz
 lib4	1	CAP_LOXW_KO1	fastqs/lib4/CAP_LOXW_KO1_1.fq.gz	fastqs/lib4/CAP_LOXW_KO1_2.fq.gz
 lib4	1	CAP_LOXW_LO1	fastqs/lib4/CAP_LOXW_LO1_1.fq.gz	fastqs/lib4/CAP_LOXW_LO1_2.fq.gz
 lib4	1	CAP_LOXE_A01	fastqs/lib4/CAP_LOXE_A01_1.fq.gz	fastqs/lib4/CAP_LOXE_A01_2.fq.gz

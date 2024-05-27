@@ -9,8 +9,8 @@ lib5	1	JME29AUG_7	fastqs/lib5/JME29AUG_7_1.fq.gz	fastqs/lib5/JME29AUG_7_2.fq.gz
 lib5	1	JME29AUG_9	fastqs/lib5/JME29AUG_9_1.fq.gz	fastqs/lib5/JME29AUG_9_2.fq.gz
 lib5	1	211419	fastqs/lib5/211419_1.fq.gz	fastqs/lib5/211419_2.fq.gz
 lib5	1	K16AUG17_01	fastqs/lib5/K16AUG17_01_1.fq.gz	fastqs/lib5/K16AUG17_01_2.fq.gz
-lib5	1	KM11SEPT19_1x	fastqs/lib5/KM11SEPT19_1x_1.fq.gz	fastqs/lib5/KM11SEPT19_1x_2.fq.gz
-lib5	1	KM11SEPT19_2x	fastqs/lib5/KM11SEPT19_2x_1.fq.gz	fastqs/lib5/KM11SEPT19_2x_2.fq.gz
+lib5	1	KM11SEPT19_1X	fastqs/lib5/KM11SEPT19_1X_1.fq.gz	fastqs/lib5/KM11SEPT19_1X_2.fq.gz
+lib5	1	KM11SEPT19_2X	fastqs/lib5/KM11SEPT19_2X_1.fq.gz	fastqs/lib5/KM11SEPT19_2X_2.fq.gz
 lib5	1	16AUG22RAPR1BEAV	fastqs/lib5/16AUG22RAPR1BEAV_1.fq.gz	fastqs/lib5/16AUG22RAPR1BEAV_2.fq.gz
 lib5	1	18AUG22BEAVRAPR10	fastqs/lib5/18AUG22BEAVRAPR10_1.fq.gz	fastqs/lib5/18AUG22BEAVRAPR10_2.fq.gz
 lib5	1	18AUG22BEAVRAPR15	fastqs/lib5/18AUG22BEAVRAPR15_1.fq.gz	fastqs/lib5/18AUG22BEAVRAPR15_2.fq.gz
