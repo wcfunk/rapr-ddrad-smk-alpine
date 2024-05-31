@@ -26,6 +26,5 @@ rule cstacks:
     shell:
         " (cstacks				"
         " -P results/lib2/stacks_denovo/ustacks/	"
-        " -o results/lib2/stacks_denovo/cstacks/	"
         " -M {params.popmap}			"
         " -n 3 -p 24) 2> {log}			"
