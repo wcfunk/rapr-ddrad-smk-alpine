@@ -20,6 +20,6 @@ rule rename_ustacks:
     shell:
         """
         mv {input.tags1} {output.tags} &&
-        mv {input.snps1} {output.snps}
+        mv {input.snps1} {output.snps} &&
         mv {input.alleles1} {output.alleles}
         """
