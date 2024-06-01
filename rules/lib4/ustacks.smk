@@ -4,15 +4,16 @@ rule ustacks:
     input:
         R1="results/lib4/process_radtags/{sample}.1.fq.gz",
     output:
-        tags="results/lib4/stacks_denovo/ustacks/{sample}.1.tags.tsv.gz",	
-        snps="results/lib4/stacks_denovo/ustacks/{sample}.1.snps.tsv.gz",
-        alleles="results/lib4/stacks_denovo/ustacks/{sample}.1.alleles.tsv.gz"
+        tags1="results/lib4/stacks_denovo/ustacks/{sample}.1.tags.tsv.gz",	
+        snps1="results/lib4/stacks_denovo/ustacks/{sample}.1.snps.tsv.gz",
+        alleles1="results/lib4/stacks_denovo/ustacks/{sample}.1.alleles.tsv.gz"
     conda:
         "stacks-2.65"
     resources:
         cpus=24,
         mem_mb=89760,
-        time="24:00:00"
+        qos="long",
+        time="72:00:00"
     log:
         "results/lib4/logs/stacks_denovo/ustacks/{sample}.log"
     benchmark:
