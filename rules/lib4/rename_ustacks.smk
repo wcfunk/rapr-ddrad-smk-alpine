@@ -1,6 +1,6 @@
 # Remove extra .1s from ustacks output files
 
-rule rename_fastqs:
+rule rename_ustacks:
     input:
         tags1="results/lib4/stacks_denovo/ustacks/{sample}.1.tags.tsv.gz",	
         snps1="results/lib4/stacks_denovo/ustacks/{sample}.1.snps.tsv.gz",
