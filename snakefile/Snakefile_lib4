@@ -1,5 +1,3 @@
-ruleorder: populations > gstacks > tsv2bam > sstacks > cstacks > rename_ustacks > ustacks > rename_fastqs > process_radtags > clone_filter
-
 configfile: "rapr-ddrad-smk-alpine/config/config_lib4.yaml"
 
 include: "../rules/lib4/common.smk"
