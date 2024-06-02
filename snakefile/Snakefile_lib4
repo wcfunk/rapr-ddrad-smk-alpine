@@ -4,6 +4,7 @@ include: "../rules/lib4/common.smk"
 
 include: "../rules/lib4/clone_filter.smk"
 
+ruleorder: rename_fastqs > process_radtags
 include: "../rules/lib4/process_radtags.smk"
 include: "../rules/lib4/rename_fastqs.smk"
 
