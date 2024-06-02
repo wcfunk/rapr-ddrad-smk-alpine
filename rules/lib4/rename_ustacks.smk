@@ -19,7 +19,7 @@ rule rename_ustacks:
         "results/lib4/benchmarks/rename_ustacks/{sample}.bmk"
     shell:
         """
-        mv {input.tags1} {output.tags} &&
-        mv {input.snps1} {output.snps} &&
+        mv {input.tags1} {output.tags}
+        mv {input.snps1} {output.snps}
         mv {input.alleles1} {output.alleles}
         """
