@@ -16,9 +16,9 @@ rule mv_cstacks:
         mem_mb=3740,
         time="00:30:00"
     log:
-        "results/lib2/logs/mv_cstacks/{sample}.log"
+        "results/lib2/logs/mv_cstacks/mv_cstacks.log"
     benchmark:
-        "results/lib2/benchmarks/mv_cstacks/{sample}.bmk"
+        "results/lib2/benchmarks/mv_cstacks/mv_cstacks.bmk"
     shell:
         """
         mv {input.tags_rename} {output.tags_cstacks} &&
