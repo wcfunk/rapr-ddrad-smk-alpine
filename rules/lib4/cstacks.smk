@@ -21,9 +21,9 @@ rule cstacks:
         qos="long",
         time="72:00:00"
     log:
-        "results/lib4/logs/stacks_denovo/rename_ustacks/cstacks.log"
+        "results/lib4/logs/stacks_denovo/cstacks/cstacks.log"
     benchmark:
-        "results/lib4/benchmarks/stacks_denovo/rename_ustacks/cstacks.bmk"
+        "results/lib4/benchmarks/stacks_denovo/cstacks/cstacks.bmk"
     shell:
         " (cstacks				"
         " -P results/lib4/stacks_denovo/rename_ustacks/	"
