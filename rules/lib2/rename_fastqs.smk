@@ -1,25 +1,22 @@
-# Remove extra .1s from ustacks output files
+# Remove extra 1s and 2s from end of fastq files
 
-rule rename_ustacks:
+rule rename_fastqs:
     input:
-        tags1="results/lib2/stacks_denovo/ustacks/{sample}.1.tags.tsv.gz",	
-        snps1="results/lib2/stacks_denovo/ustacks/{sample}.1.snps.tsv.gz",
-        alleles1="results/lib2/stacks_denovo/ustacks/{sample}.1.alleles.tsv.gz"
+        R1extraones="results/lib2/process_radtags/{sample}_1.1.1.fq.gz",
+        R2extratwos="results/lib2/process_radtags/{sample}_2.2.2.fq.gz"
     output:
-        tags="results/lib2/stacks_denovo/rename_ustacks/{sample}.tags.tsv.gz",
-        snps="results/lib2/stacks_denovo/rename_ustacks/{sample}.snps.tsv.gz",
-        alleles="results/lib2/stacks_denovo/rename_ustacks/{sample}.alleles.tsv.gz"
+        R1="results/lib2/process_radtags/{sample}.1.fq.gz",
+        R2="results/lib2/process_radtags/{sample}.2.fq.gz"
     resources:
         cpus=1,
         mem_mb=3740,
         time="00:30:00"
     log:
-        "results/lib2/logs/rename_ustacks/{sample}.log"
+        "results/lib2/logs/rename_fastqs/{sample}.log"
     benchmark:
-        "results/lib2/benchmarks/rename_ustacks/{sample}.bmk"
+        "results/lib2/benchmarks/rename_fastqs/{sample}.bmk"
     shell:
         """
-        cp {input.tags1} {output.tags} &&
-        cp {input.snps1} {output.snps} &&
-        cp {input.alleles1} {output.alleles}
+        mv {input.R1extraones} {output.R1} &&
+        mv {input.R2extratwos} {output.R2}
         """
