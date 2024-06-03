@@ -12,7 +12,8 @@ rule ustacks:
     resources:
         cpus=24,
         mem_mb=89760,
-        time="24:00:00"
+        qos="long",
+        time="72:00:00"
     log:
         "results/lib3/logs/stacks_denovo/ustacks/{sample}.log"
     benchmark:
