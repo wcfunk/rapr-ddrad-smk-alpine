@@ -7,10 +7,10 @@ rule cstacks:
         expand("results/lib4/stacks_denovo/rename_ustacks/{s}.snps.tsv.gz", s=SAMPLES),
         expand("results/lib4/stacks_denovo/rename_ustacks/{s}.alleles.tsv.gz", s=SAMPLES)
     output:
-        "results/lib4/stacks_denovo/cstacks/catalog.tags.tsv.gz",
-        "results/lib4/stacks_denovo/cstacks/catalog.snps.tsv.gz",
-        "results/lib4/stacks_denovo/cstacks/catalog.alleles.tsv.gz",
-        "results/lib4/stacks_denovo/cstacks/catalog.sample_list.tsv.gz"
+        "results/lib4/stacks_denovo/rename_ustacks/catalog.tags.tsv.gz",
+        "results/lib4/stacks_denovo/rename_ustacks/catalog.snps.tsv.gz",
+        "results/lib4/stacks_denovo/rename_ustacks/catalog.alleles.tsv.gz",
+        "results/lib4/stacks_denovo/rename_ustacks/catalog.sample_list.tsv.gz"
     params:
         popmap=config["popmap"],
     conda:
@@ -21,9 +21,9 @@ rule cstacks:
         qos="long",
         time="72:00:00"
     log:
-        "results/lib4/logs/stacks_denovo/cstacks/cstacks.log"
+        "results/lib4/logs/stacks_denovo/rename_ustacks/cstacks.log"
     benchmark:
-        "results/lib4/benchmarks/stacks_denovo/cstacks/cstacks.bmk"
+        "results/lib4/benchmarks/stacks_denovo/rename_ustacks/cstacks.bmk"
     shell:
         " (cstacks				"
         " -P results/lib4/stacks_denovo/rename_ustacks/	"
