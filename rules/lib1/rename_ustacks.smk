@@ -2,21 +2,21 @@
 
 rule rename_ustacks:
     input:
-        tags1="results/lib2/stacks_denovo/ustacks/{sample}.1.tags.tsv.gz",	
-        snps1="results/lib2/stacks_denovo/ustacks/{sample}.1.snps.tsv.gz",
-        alleles1="results/lib2/stacks_denovo/ustacks/{sample}.1.alleles.tsv.gz"
+        tags1="results/lib1/stacks_denovo/ustacks/{sample}.1.tags.tsv.gz",	
+        snps1="results/lib1/stacks_denovo/ustacks/{sample}.1.snps.tsv.gz",
+        alleles1="results/lib1/stacks_denovo/ustacks/{sample}.1.alleles.tsv.gz"
     output:
-        tags="results/lib2/stacks_denovo/rename_ustacks/{sample}.tags.tsv.gz",
-        snps="results/lib2/stacks_denovo/rename_ustacks/{sample}.snps.tsv.gz",
-        alleles="results/lib2/stacks_denovo/rename_ustacks/{sample}.alleles.tsv.gz"
+        tags="results/lib1/stacks_denovo/rename_ustacks/{sample}.tags.tsv.gz",
+        snps="results/lib1/stacks_denovo/rename_ustacks/{sample}.snps.tsv.gz",
+        alleles="results/lib1/stacks_denovo/rename_ustacks/{sample}.alleles.tsv.gz"
     resources:
         cpus=1,
         mem_mb=3740,
         time="00:30:00"
     log:
-        "results/lib2/logs/rename_ustacks/{sample}.log"
+        "results/lib1/logs/rename_ustacks/{sample}.log"
     benchmark:
-        "results/lib2/benchmarks/rename_ustacks/{sample}.bmk"
+        "results/lib1/benchmarks/rename_ustacks/{sample}.bmk"
     shell:
         """
         cp {input.tags1} {output.tags} &&

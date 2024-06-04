@@ -3,14 +3,14 @@
 
 rule cstacks:
     input:
-        expand("results/lib2/stacks_denovo/rename_ustacks/{s}.tags.tsv.gz", s=SAMPLES),	
-        expand("results/lib2/stacks_denovo/rename_ustacks/{s}.snps.tsv.gz", s=SAMPLES),
-        expand("results/lib2/stacks_denovo/rename_ustacks/{s}.alleles.tsv.gz", s=SAMPLES)
+        expand("results/lib1/stacks_denovo/rename_ustacks/{s}.tags.tsv.gz", s=SAMPLES),	
+        expand("results/lib1/stacks_denovo/rename_ustacks/{s}.snps.tsv.gz", s=SAMPLES),
+        expand("results/lib1/stacks_denovo/rename_ustacks/{s}.alleles.tsv.gz", s=SAMPLES)
     output:
-        "results/lib2/stacks_denovo/rename_ustacks/catalog.tags.tsv.gz",
-        "results/lib2/stacks_denovo/rename_ustacks/catalog.snps.tsv.gz",
-        "results/lib2/stacks_denovo/rename_ustacks/catalog.alleles.tsv.gz",
-        "results/lib2/stacks_denovo/rename_ustacks/catalog.sample_list.tsv.gz"
+        "results/lib1/stacks_denovo/rename_ustacks/catalog.tags.tsv.gz",
+        "results/lib1/stacks_denovo/rename_ustacks/catalog.snps.tsv.gz",
+        "results/lib1/stacks_denovo/rename_ustacks/catalog.alleles.tsv.gz",
+        "results/lib1/stacks_denovo/rename_ustacks/catalog.sample_list.tsv.gz"
     params:
         popmap=config["popmap"],
     conda:
@@ -21,11 +21,11 @@ rule cstacks:
         qos="long",
         time="72:00:00"
     log:
-        "results/lib2/logs/stacks_denovo/cstacks/cstacks.log"
+        "results/lib1/logs/stacks_denovo/cstacks/cstacks.log"
     benchmark:
-        "results/lib2/benchmarks/stacks_denovo/cstacks/cstacks.bmk"
+        "results/lib1/benchmarks/stacks_denovo/cstacks/cstacks.bmk"
     shell:
         " (cstacks				"
-        " -P results/lib2/stacks_denovo/rename_ustacks/	"
+        " -P results/lib1/stacks_denovo/rename_ustacks/	"
         " -M {params.popmap}			"
         " -n 3 -p 24) 2> {log}			"
