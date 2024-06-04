@@ -1,7 +1,7 @@
 
-sample_info: "rapr-ddrad-smk-alpine/data/sample_info_lib2.tsv"
+sample_info: "rapr-ddrad-smk-alpine/data/sample_info_lib8.tsv"
 
-popmap: "rapr-ddrad-smk-alpine/data/popmap_lib2.tsv"
+popmap: "rapr-ddrad-smk-alpine/data/popmap_lib8.tsv"
 
 process_radtags:
     enzyme1: ecoRI
