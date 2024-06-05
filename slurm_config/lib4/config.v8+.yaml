@@ -4,6 +4,7 @@ executor: cluster-generic
 cluster-generic-submit-cmd:
   mkdir -p results/lib4/slurm_logs/{rule} &&
   sbatch
+    --account=csu89_alpine1
     --partition=amilan
     --cpus-per-task={threads}
     --mem={resources.mem_mb}
