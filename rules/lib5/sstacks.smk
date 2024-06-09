@@ -15,7 +15,7 @@ rule sstacks:
     resources:
         cpus=10,
         mem_mb=37400,
-        time="24:00:00"
+        time="72:00:00"
     log:
         "results/lib5/logs/stacks_denovo/sstacks/{sample}.log"
     benchmark:
