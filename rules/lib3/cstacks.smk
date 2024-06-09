@@ -19,7 +19,7 @@ rule cstacks:
         cpus=24,
         mem_mb=89760,
         qos="long",
-        time="72:00:00"
+        time="7-00:00:00"
     log:
         "results/lib3/logs/stacks_denovo/cstacks/cstacks.log"
     benchmark:

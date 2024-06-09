@@ -18,7 +18,7 @@ rule cstacks:
     resources:
         cpus=24,
         mem_mb=89760,
-        time="24:00:00"
+        time="7-00:00:00"
     log:
         "results/lib7/logs/stacks_denovo/cstacks/cstacks.log"
     benchmark:

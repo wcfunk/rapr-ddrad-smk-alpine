@@ -14,7 +14,7 @@ rule gstacks:
     resources:
         cpus=24,
         mem=89760,
-        time="24:00:00"
+        time="7-00:00:00"
     log:
         "results/lib1/logs/stacks_denovo/gstacks/gstacks.log"
     benchmark:
