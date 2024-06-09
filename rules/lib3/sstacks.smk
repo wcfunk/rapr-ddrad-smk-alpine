@@ -15,6 +15,7 @@ rule sstacks:
     resources:
         cpus=10,
         mem_mb=37400,
+        qos="long",
         time="72:00:00"
     log:
         "results/lib3/logs/stacks_denovo/sstacks/{sample}.log"

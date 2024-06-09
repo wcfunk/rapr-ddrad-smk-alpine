@@ -14,6 +14,7 @@ rule gstacks:
     resources:
         cpus=24,
         mem=89760,
+        qos="long",
         time="7-00:00:00"
     log:
         "results/lib7/logs/stacks_denovo/gstacks/gstacks.log"
