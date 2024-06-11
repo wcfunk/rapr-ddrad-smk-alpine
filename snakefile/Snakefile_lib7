@@ -9,7 +9,9 @@ include: "../rules/lib7/rename_fastqs.smk"
 
 # Stacks de novo pipeline
 include: "../rules/lib7/ustacks.smk"
+include: "../rules/lib7/rename_ustacks.smk"
 include: "../rules/lib7/cstacks.smk"
+include: "../rules/lib7/mv_cstacks.smk:
 include: "../rules/lib7/sstacks.smk"
 include: "../rules/lib7/tsv2bam.smk"
 include: "../rules/lib7/gstacks.smk"
