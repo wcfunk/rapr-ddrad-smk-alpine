@@ -10,8 +10,8 @@ rule ustacks:
     conda:
         "stacks-2.65"
     resources:
-        cpus=24,
-        mem_mb=89760,
+        cpus=48,
+        mem_mb=179520,
         qos="long",
         time="72:00:00"
     log:
