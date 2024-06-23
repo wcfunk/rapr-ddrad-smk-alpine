@@ -16,8 +16,8 @@ rule sstacks:
     conda:
         "stacks-2.65"
     resources:
-        cpus=10,
-        mem_mb=37400,
+        cpus=24,
+        mem_mb=89760,
         qos="long",
         time="72:00:00"
     log:
