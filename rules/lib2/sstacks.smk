@@ -2,6 +2,9 @@
 
 rule sstacks:
     input:
+        "results/lib2/stacks_denovo/rename_ustacks/{sample}.tags.tsv.gz",
+        "results/lib2/stacks_denovo/rename_ustacks/{sample}.snps.tsv.gz",
+        "results/lib2/stacks_denovo/rename_ustacks/{sample}.alleles.tsv.gz",
         "results/lib2/stacks_denovo/cstacks/catalog.tags.tsv.gz",
         "results/lib2/stacks_denovo/cstacks/catalog.snps.tsv.gz",
         "results/lib2/stacks_denovo/cstacks/catalog.alleles.tsv.gz",
