@@ -7,7 +7,7 @@ rule sstacks:
         "results/lib2/stacks_denovo/cstacks/catalog.alleles.tsv.gz",
         "results/lib2/stacks_denovo/cstacks/catalog.sample_list.tsv.gz"
     output:
-        "results/lib2/stacks_denovo/sstacks/{sample}.matches.tsv.gz"
+        "results/lib2/stacks_denovo/cstacks/{sample}.matches.tsv.gz"
     params:
         popmap=config["popmap"],
     conda:
@@ -24,6 +24,5 @@ rule sstacks:
     shell:
         " (sstacks				"
         " -P results/lib2/stacks_denovo/cstacks/	"
-        " -o results/lib2/stacks_denovo/sstacks/     "
         " -M {params.popmap} -p 10)		"
         " 2> {log}				"
