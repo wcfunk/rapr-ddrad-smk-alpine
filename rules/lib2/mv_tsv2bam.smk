@@ -10,9 +10,9 @@ rule mv_tsv2bam:
         mem_mb=3740,
         time="00:30:00"
     log:
-        "results/lib2/logs/mv_tsv2bam/mv_tsv2bam.log"
+        "results/lib2/logs/mv_tsv2bam/{sample}.log"
     benchmark:
-        "results/lib2/benchmarks/mv_tsv2bam/mv_tsv2bam.bmk"
+        "results/lib2/benchmarks/mv_tsv2bam/{sample}.bmk"
     shell:
         """
         mv {input.matches_sstacks} {output.matches_tsv2bam}

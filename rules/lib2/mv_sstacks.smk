@@ -10,9 +10,9 @@ rule mv_sstacks:
         mem_mb=3740,
         time="00:30:00"
     log:
-        "results/lib2/logs/mv_sstacks/mv_sstacks.log"
+        "results/lib2/logs/mv_sstacks/{sample}.log"
     benchmark:
-        "results/lib2/benchmarks/mv_sstacks/mv_sstacks.bmk"
+        "results/lib2/benchmarks/mv_sstacks/{sample}.bmk"
     shell:
         """
         mv {input.matches_cstacks} {output.matches_sstacks}
