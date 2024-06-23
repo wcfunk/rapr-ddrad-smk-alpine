@@ -15,7 +15,7 @@ include: "../rules/lib2/mv_cstacks.smk"
 include: "../rules/lib2/sstacks.smk"
 include: "../rules/lib2/mv_sstacks.smk"
 include: "../rules/lib2/tsv2bam.smk"
-include: "../rules/lib2/tsv2bam.smk"
+include: "../rules/lib2/mv_tsv2bam.smk"
 include: "../rules/lib2/gstacks.smk"
 
 include: "../rules/lib2/populations.smk"
