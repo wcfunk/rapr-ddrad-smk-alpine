@@ -7,8 +7,7 @@ rule sstacks:
         "results/lib2/stacks_denovo/cstacks/{sample}.alleles.tsv.gz",
         "results/lib2/stacks_denovo/cstacks/catalog.tags.tsv.gz",
         "results/lib2/stacks_denovo/cstacks/catalog.snps.tsv.gz",
-        "results/lib2/stacks_denovo/cstacks/catalog.alleles.tsv.gz",
-        "results/lib2/stacks_denovo/cstacks/catalog.sample_list.tsv.gz"
+        "results/lib2/stacks_denovo/cstacks/catalog.alleles.tsv.gz"
     output:
         "results/lib2/stacks_denovo/cstacks/{sample}.matches.tsv.gz"
     params:
