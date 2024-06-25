@@ -27,5 +27,5 @@ rule sstacks:
     shell:
         " (sstacks				"
         " -P results/lib2/stacks_denovo/cstacks/	"
-        " -M rapr-ddrad-smk-alpine/data/popmap_lib2_OSF246.tsv -p 24)		"
+        " -M {params.popmap} -p 24)		"
         " 2> {log}				"
