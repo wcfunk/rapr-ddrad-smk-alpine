@@ -4,9 +4,9 @@ rule ustacks:
     input:
         R1="results/lib2/process_radtags/{sample}.1.fq.gz",
     output:
-        tags="results/lib2/stacks_denovo/ustacks/{sample}.1.tags.tsv.gz",	
-        snps="results/lib2/stacks_denovo/ustacks/{sample}.1.snps.tsv.gz",
-        alleles="results/lib2/stacks_denovo/ustacks/{sample}.1.alleles.tsv.gz"
+        tags="results/lib2/stacks_denovo/{sample}.1.tags.tsv.gz",	
+        snps="results/lib2/stacks_denovo/{sample}.1.snps.tsv.gz",
+        alleles="results/lib2/stacks_denovo/{sample}.1.alleles.tsv.gz"
     conda:
         "stacks-2.65"
     resources:
@@ -20,7 +20,7 @@ rule ustacks:
         "results/lib2/benchmarks/stacks_denovo/ustacks/{sample}.bmk"
     shell:
         " (ustacks -f {input.R1}			"
-        " -o results/lib2/stacks_denovo/ustacks/		"
+        " -o results/lib2/stacks_denovo/		"
         " -m 3 -M 2 -d -t gzfastq -p 10			"
         " --model_type bounded --bound_high 0.05)	"
         "  2> {log}					"
