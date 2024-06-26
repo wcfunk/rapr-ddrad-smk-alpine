@@ -4,9 +4,9 @@ rule ustacks:
     input:
         R1="results/lib2/process_radtags/{sample}.1.fq.gz",
     output:
-        tags="results/lib2/stacks_denovo/{sample}.1.tags.tsv.gz",	
-        snps="results/lib2/stacks_denovo/{sample}.1.snps.tsv.gz",
-        alleles="results/lib2/stacks_denovo/{sample}.1.alleles.tsv.gz"
+        tags1="results/lib2/stacks_denovo/{sample}.1.tags.tsv.gz",	
+        snps1="results/lib2/stacks_denovo/{sample}.1.snps.tsv.gz",
+        alleles1="results/lib2/stacks_denovo/{sample}.1.alleles.tsv.gz"
     conda:
         "stacks-2.65"
     resources:
