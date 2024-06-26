@@ -19,7 +19,7 @@ rule mv_ustacks:
         "results/lib2/benchmarks/mv_ustacks/{sample}.bmk"
     shell:
         """
-        cp {input.tags_rename} {output.tags_cstacks} &&
-        cp {input.snps_rename} {output.snps_cstacks} &&
-        cp {input.alleles_rename} {output.alleles_cstacks}
+        mv {input.tags_rename} {output.tags_cstacks} &&
+        mv {input.snps_rename} {output.snps_cstacks} &&
+        mv {input.alleles_rename} {output.alleles_cstacks}
         """
