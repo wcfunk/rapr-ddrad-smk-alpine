@@ -3,8 +3,8 @@
 
 rule populations:
     input:
-        "results/lib2/stacks_denovo/gstacks/catalog.fa.gz",
-        "results/lib2/stacks_denovo/gstacks/catalog.calls"
+        "results/lib2/stacks_denovo/catalog.fa.gz",
+        "results/lib2/stacks_denovo/catalog.calls"
     output:
         "results/lib2/populations/populations.snps.vcf"
     params:
@@ -20,7 +20,7 @@ rule populations:
         "results/lib2/logs/populations/populations.log"
     shell:
         " (populations				"
-        " -P results/lib2/stacks_denovo/gstacks/ 	"
+        " -P results/lib2/stacks_denovo/ 	"
         " -O results/lib2/populations/ 		"
         " -M {params.popmap}			" 
         " -p 2 -r 0.5 --min-maf 0.1		"
