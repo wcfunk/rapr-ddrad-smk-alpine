@@ -21,6 +21,6 @@ rule ustacks:
     shell:
         " (ustacks -f {input.R1}			"
         " -o results/lib2/stacks_denovo/		"
-        " -m 3 -M 2 -d -t gzfastq -p 10			"
+        " -m 3 -M 2 -d -t gzfastq -p 24			"
         " --model_type bounded --bound_high 0.05)	"
         "  2> {log}					"
