@@ -2,9 +2,9 @@
 
 rule rename_ustacks:
     input:
-        tags1="results/lib2/stacks_denovo/ustacks/{sample}.1.tags.tsv.gz",	
-        snps1="results/lib2/stacks_denovo/ustacks/{sample}.1.snps.tsv.gz",
-        alleles1="results/lib2/stacks_denovo/ustacks/{sample}.1.alleles.tsv.gz"
+        tags1="results/lib2/stacks_denovo/{sample}.1.tags.tsv.gz",	
+        snps1="results/lib2/stacks_denovo/{sample}.1.snps.tsv.gz",
+        alleles1="results/lib2/stacks_denovo/{sample}.1.alleles.tsv.gz"
     output:
         tags="results/lib2/stacks_denovo/rename_ustacks/{sample}.tags.tsv.gz",
         snps="results/lib2/stacks_denovo/rename_ustacks/{sample}.snps.tsv.gz",
