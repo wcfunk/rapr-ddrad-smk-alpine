@@ -6,9 +6,9 @@ rule mv_ustacks:
         snps_rename="results/lib2/stacks_denovo/rename_ustacks/{sample}.snps.tsv.gz",
         alleles_rename="results/lib2/stacks_denovo/rename_ustacks/{sample}.alleles.tsv.gz"
     output:
-        tags_cstacks="results/lib2/stacks_denovo/{sample}.tags.tsv.gz",
-        snps_cstacks="results/lib2/stacks_denovo/{sample}.snps.tsv.gz",
-        alleles_cstacks="results/lib2/stacks_denovo/{sample}.alleles.tsv.gz"
+        tags_stacks="results/lib2/stacks_denovo/{sample}.tags.tsv.gz",
+        snps_stacks="results/lib2/stacks_denovo/{sample}.snps.tsv.gz",
+        alleles_stacks="results/lib2/stacks_denovo/{sample}.alleles.tsv.gz"
     resources:
         cpus=1,
         mem_mb=3740,
@@ -19,7 +19,7 @@ rule mv_ustacks:
         "results/lib2/benchmarks/mv_ustacks/{sample}.bmk"
     shell:
         """
-        mv {input.tags_rename} {output.tags_cstacks} &&
-        mv {input.snps_rename} {output.snps_cstacks} &&
-        mv {input.alleles_rename} {output.alleles_cstacks}
+        mv {input.tags_rename} {output.tags_stacks} &&
+        mv {input.snps_rename} {output.snps_stacks} &&
+        mv {input.alleles_rename} {output.alleles_stacks}
         """
