@@ -26,6 +26,6 @@ rule cstacks:
         "results/lib2/benchmarks/stacks_denovo/cstacks/cstacks.bmk"
     shell:
         " (cstacks				"
-        " -P results/lib2/stacks_denovo/	"
+        " -P results/lib2/stacks_denovo/rename_ustacks/	"
         " -M {params.popmap}			"
         " -n 3 -p 24) 2> {log}			"
