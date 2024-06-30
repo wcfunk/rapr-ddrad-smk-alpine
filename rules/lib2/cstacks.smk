@@ -3,14 +3,14 @@
 
 rule cstacks:
     input:
-        expand("results/lib2/stacks_denovo/rename_ustacks/{s}.tags.tsv.gz", s=SAMPLES),	
-        expand("results/lib2/stacks_denovo/rename_ustacks/{s}.snps.tsv.gz", s=SAMPLES),
-        expand("results/lib2/stacks_denovo/rename_ustacks/{s}.alleles.tsv.gz", s=SAMPLES)
+        expand("results/lib2/stacks_denovo/{s}.tags.tsv.gz", s=SAMPLES),	
+        expand("results/lib2/stacks_denovo/{s}.snps.tsv.gz", s=SAMPLES),
+        expand("results/lib2/stacks_denovo/{s}.alleles.tsv.gz", s=SAMPLES)
     output:
-        "results/lib2/stacks_denovo/rename_ustacks/catalog.tags.tsv.gz",
-        "results/lib2/stacks_denovo/rename_ustacks/catalog.snps.tsv.gz",
-        "results/lib2/stacks_denovo/rename_ustacks/catalog.alleles.tsv.gz",
-        "results/lib2/stacks_denovo/rename_ustacks/catalog.sample_list.tsv.gz"
+        "results/lib2/stacks_denovo/catalog.tags.tsv.gz",
+        "results/lib2/stacks_denovo/catalog.snps.tsv.gz",
+        "results/lib2/stacks_denovo/catalog.alleles.tsv.gz",
+        "results/lib2/stacks_denovo/catalog.sample_list.tsv.gz"
     params:
         popmap=config["popmap"],
     conda:
@@ -26,6 +26,6 @@ rule cstacks:
         "results/lib2/benchmarks/stacks_denovo/cstacks/cstacks.bmk"
     shell:
         " (cstacks				"
-        " -P results/lib2/stacks_denovo/rename_ustacks/	"
+        " -P results/lib2/stacks_denovo/	"
         " -M {params.popmap}			"
         " -n 3 -p 24) 2> {log}			"

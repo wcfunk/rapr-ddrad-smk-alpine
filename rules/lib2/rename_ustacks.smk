@@ -1,14 +1,14 @@
-# Remove extra .1s from ustacks output files
+# Remove extra .1s from ustacks output files and move to stacks_denovo
 
 rule rename_ustacks:
     input:
-        tags1="results/lib2/stacks_denovo/{sample}.1.tags.tsv.gz",	
-        snps1="results/lib2/stacks_denovo/{sample}.1.snps.tsv.gz",
-        alleles1="results/lib2/stacks_denovo/{sample}.1.alleles.tsv.gz"
+        tags1="results/lib2/stacks_denovo/ustacks/{sample}.1.tags.tsv.gz",	
+        snps1="results/lib2/stacks_denovo/ustacks/{sample}.1.snps.tsv.gz",
+        alleles1="results/lib2/stacks_denovo/ustacks/{sample}.1.alleles.tsv.gz"
     output:
-        tags_rename="results/lib2/stacks_denovo/rename_ustacks/{sample}.tags.tsv.gz",
-        snps_rename="results/lib2/stacks_denovo/rename_ustacks/{sample}.snps.tsv.gz",
-        alleles_rename="results/lib2/stacks_denovo/rename_ustacks/{sample}.alleles.tsv.gz"
+        tags="results/lib2/stacks_denovo/{sample}.tags.tsv.gz",
+        snps="results/lib2/stacks_denovo/{sample}.snps.tsv.gz",
+        alleles="results/lib2/stacks_denovo/{sample}.alleles.tsv.gz"
     resources:
         cpus=1,
         mem_mb=3740,
@@ -19,7 +19,7 @@ rule rename_ustacks:
         "results/lib2/benchmarks/rename_ustacks/{sample}.bmk"
     shell:
         """
-        cp {input.tags1} {output.tags_rename} &&
-        cp {input.snps1} {output.snps_rename} &&
-        cp {input.alleles1} {output.alleles_rename}
+        cp {input.tags1} {output.tags} &&
+        cp {input.snps1} {output.snps} &&
+        cp {input.alleles1} {output.alleles}
         """
