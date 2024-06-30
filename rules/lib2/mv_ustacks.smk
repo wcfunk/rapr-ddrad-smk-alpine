@@ -20,6 +20,6 @@ rule mv_ustacks:
     shell:
         """
         mv {input.tags_source} {output.tags_target} &&
-        mv {input.tags_source} {output.snps_target} &&
-        mv {input.tags_source} {output.alleles_target}
+        mv {input.snps_source} {output.snps_target} &&
+        mv {input.alleles_source} {output.alleles_target}
         """
