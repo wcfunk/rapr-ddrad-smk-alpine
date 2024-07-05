@@ -3,7 +3,12 @@
 
 rule tsv2bam:
     input:
-        "results/lib2/stacks_denovo/{sample}.matches.tsv.gz"
+        "results/lib2/process_radtags/{sample}.2.fq.gz",
+        "results/lib2/stacks_denovo/{sample}.matches.tsv.gz",
+        "results/lib2/stacks_denovo/catalog.tags.tsv.gz",
+        "results/lib2/stacks_denovo/catalog.snps.tsv.gz",
+        "results/lib2/stacks_denovo/catalog.alleles.tsv.gz",
+        "results/lib2/stacks_denovo/catalog.sample_list.tsv.gz"
     output:
         "results/lib2/stacks_denovo/{sample}.matches.bam"
     params:
