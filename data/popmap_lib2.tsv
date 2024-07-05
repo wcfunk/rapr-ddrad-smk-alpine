@@ -1,7 +1,7 @@
-OSF_E246	Blooms_Ditch_Crockett	Black_R
-OSF_E348	Black_R_Mima_Cr	Black_R
-OSF_E356	Black_R_Mima_Cr	Black_R
-OSF_E357	Black_R_Mima_Cr	Black_R
+OSF_E246	Little_Rock_Farm_3	Blooms_Ditch_Crockett
+OSF_E348	Black_R_Ranch_1	Black_R_Mima_Cr
+OSF_E356	WDFW_Mima_1	Black_R_Mima_Cr
+OSF_E357	WDFW_Mima_1	Black_R_Mima_Cr
 PD1E_H02	Pond1_E	Dilman
 DP1W_A01	Pond1_W	Dilman
 DSBT_A01	SBt	Dilman
@@ -32,9 +32,9 @@ USGS_220341	Cr_Channel_S	Annie_Cr
 USGS_211875	NW_Pasture	Buck_Lk
 USGS_212263	NW_Pasture	Buck_Lk
 USGS_211861	NW_Pasture	Buck_Lk
-OSF_E20	Potter_Rd	S_Fk_Nooksack
-OSF_E138	Samish_R_Mills_Cr	Samish_R
-OSF_E139	Samish_R_Mills_Cr	Samish_R
-OSF_E234	Rails_to_Trails	Black_R
-OSF_E236	Rails_to_Trails	Black_R
-OSF_E237	Rails_to_Trails	Black_R
+OSF_E20	Nor_Sec_N01	Potter_Rd
+OSF_E138	Samish_R_Mills_Cr	Samish_R_Mills_Cr
+OSF_E139	Samish_R_Mills_Cr	Samish_R_Mills_Cr
+OSF_E234	Rails_to_Trails_45	Rails_to_Trails
+OSF_E236	Rails_to_Trails_45	Rails_to_Trails
+OSF_E237	Rails_to_Trails_45	Rails_to_Trails
