@@ -16,8 +16,8 @@ rule tsv2bam:
     conda:
         "stacks-2.65"
     resources:
-        cpus=10,
-        mem_mb=37400,
+        cpus=24,
+        mem_mb=89760,
         time="24:00:00"
     log:
         "results/lib2/logs/stacks_denovo/tsv2bam/{sample}.log"
@@ -27,5 +27,5 @@ rule tsv2bam:
         " (tsv2bam				"
         " -P results/lib2/stacks_denovo/	"
         " -R results/lib2/process_radtags/   	"
-        " -M {params.popmap} -t 10) 		"
+        " -M {params.popmap} -t 24) 		"
         " 2> {log}				"
