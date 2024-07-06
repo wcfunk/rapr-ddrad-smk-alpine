@@ -3,7 +3,11 @@
 
 rule gstacks:
     input:
-        expand("results/lib2/stacks_denovo/{s}.matches.bam", s=SAMPLES)
+        expand("results/lib2/stacks_denovo/{s}.matches.bam", s=SAMPLES),
+        "results/lib2/stacks_denovo/catalog.tags.tsv.gz",
+        "results/lib2/stacks_denovo/catalog.snps.tsv.gz",
+        "results/lib2/stacks_denovo/catalog.alleles.tsv.gz",
+        "results/lib2/stacks_denovo/catalog.sample_list.tsv.gz"
     output:
         "results/lib2/stacks_denovo/catalog.fa.gz",
         "results/lib2/stacks_denovo/catalog.calls"
