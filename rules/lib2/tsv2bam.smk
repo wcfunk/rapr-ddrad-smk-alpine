@@ -27,5 +27,5 @@ rule tsv2bam:
         " (tsv2bam				"
         " -P results/lib2/stacks_denovo/	"
         " -R results/lib2/process_radtags/   	"
-        " -M {params.popmap} -t 24) 		"
+        " -M rapr-ddrad-smk-alpine/data/popmap_lib2_by_sample/popmap_lib2_{wildcards.sample}.tsv -t 24) 		"
         " 2> {log}				"
