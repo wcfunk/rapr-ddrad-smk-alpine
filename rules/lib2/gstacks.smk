@@ -3,21 +3,25 @@
 
 rule gstacks:
     input:
-        expand("results/lib2/stacks_denovo/{s}.matches.bam", s=SAMPLES),
+        expand("results/lib2/stacks_denovo/{s}.tags.tsv.gz", s=SAMPLES),    
+        expand("results/lib2/stacks_denovo/{s}.snps.tsv.gz", s=SAMPLES),
+        expand("results/lib2/stacks_denovo/{s}.alleles.tsv.gz", s=SAMPLES),
         "results/lib2/stacks_denovo/catalog.tags.tsv.gz",
         "results/lib2/stacks_denovo/catalog.snps.tsv.gz",
         "results/lib2/stacks_denovo/catalog.alleles.tsv.gz",
-        "results/lib2/stacks_denovo/catalog.sample_list.tsv.gz"
+        "results/lib2/stacks_denovo/catalog.sample_list.tsv.gz",
+        expand("results/lib2/stacks_denovo/{s}.matches.tsv.gz", s=SAMPLES),
+        expand("results/lib2/stacks_denovo/{s}.matches.bam", s=SAMPLES)
     output:
         "results/lib2/stacks_denovo/catalog.fa.gz",
         "results/lib2/stacks_denovo/catalog.calls"
     params:
-        popmap=config["popmap"],
+        popmap=config["popmap"]
     conda:
         "stacks-2.65"
     resources:
-        cpus=48,
-        mem=179520,
+        cpus=24,
+        mem=89760,
         qos="long",
         time="7-00:00:00"
     log:
@@ -28,5 +32,5 @@ rule gstacks:
         " (gstacks				"
         " -P results/lib2/stacks_denovo/	"
         " -O results/lib2/stacks_denovo/	"
-        " -M {params.popmap} -t 48)		"
+        " -M {params.popmap} -t 24)		"
         " 2> {log}				"
