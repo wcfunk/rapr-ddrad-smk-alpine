@@ -20,8 +20,8 @@ rule gstacks:
     conda:
         "stacks-2.65"
     resources:
-        cpus=48,
-        mem=179520,
+        cpus=64,
+        mem=239360,
         qos="long",
         time="7-00:00:00"
     log:
@@ -32,5 +32,5 @@ rule gstacks:
         " (gstacks				"
         " -P results/lib2/stacks_denovo/	"
         " -O results/lib2/stacks_denovo/	"
-        " -M {params.popmap} -t 48)		"
+        " -M {params.popmap} -t 64)		"
         " 2> {log}				"
