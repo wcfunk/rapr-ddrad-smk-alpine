@@ -10,6 +10,7 @@ include: "../rules/WA_no_libs10and12/rename_fastqs.smk"
 # Stacks de novo pipeline
 include: "../rules/WA_no_libs10and12/ustacks.smk"
 include: "../rules/WA_no_libs10and12/rename_ustacks.smk"
+include: "../rules/WA_no_libs10and12/cstacks.smk"
 include: "../rules/WA_no_libs10and12/sstacks.smk"
 include: "../rules/WA_no_libs10and12/tsv2bam.smk"
 include: "../rules/WA_no_libs10and12/gstacks.smk"
