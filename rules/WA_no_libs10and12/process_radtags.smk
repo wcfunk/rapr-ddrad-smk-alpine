@@ -17,7 +17,7 @@ rule process_radtags:
     resources:
         cpus=10,
         mem_mb=37400,
-        time="12:00:00"
+        time="3:00:00"
     log:
         "results/WA_no_libs10and12/logs/process_radtags/{sample}.log"
     benchmark:

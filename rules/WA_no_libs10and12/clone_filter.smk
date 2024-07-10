@@ -9,7 +9,7 @@ rule clone_filter:
     resources:
         cpus=8,
         mem_mb=29920,
-        time="12:00:00"
+        time="3:00:00"
     conda:
         "stacks-2.65"
     log:

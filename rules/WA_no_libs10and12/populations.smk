@@ -12,8 +12,7 @@ rule populations:
     resources:
         cpus=24,         
         mem_mb=89760,
-        qos="long",
-        time="7-00:00:00"
+        time="24:00:00"
     conda:
         "stacks-2.65"
     log:

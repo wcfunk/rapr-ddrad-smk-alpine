@@ -22,8 +22,7 @@ rule gstacks:
     resources:
         cpus=24,
         mem_mb=89760,
-        qos="long",
-        time="7-00:00:00"
+        time="24:00:00"
     log:
         "results/WA_no_libs10and12/logs/stacks_denovo/gstacks/gstacks.log"
     benchmark:
