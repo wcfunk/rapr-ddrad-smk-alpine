@@ -1,0 +1,17 @@
+configfile: "rapr-ddrad-smk-alpine/config/config_WA_no_libs10and12.yaml"
+
+include: "../rules/WA_no_libs10and12/common.smk"
+
+include: "../rules/WA_no_libs10and12/clone_filter.smk"
+
+include: "../rules/WA_no_libs10and12/process_radtags.smk"
+include: "../rules/WA_no_libs10and12/rename_fastqs.smk"
+
+# Stacks de novo pipeline
+include: "../rules/WA_no_libs10and12/ustacks.smk"
+include: "../rules/WA_no_libs10and12/rename_ustacks.smk"
+include: "../rules/WA_no_libs10and12/sstacks.smk"
+include: "../rules/WA_no_libs10and12/tsv2bam.smk"
+include: "../rules/WA_no_libs10and12/gstacks.smk"
+
+include: "../rules/WA_no_libs10and12/populations.smk"
