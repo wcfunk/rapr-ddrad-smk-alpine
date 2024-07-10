@@ -2,15 +2,15 @@
 
 rule sstacks:
     input:
-        "results/lib2/stacks_denovo/{sample}.tags.tsv.gz",
-        "results/lib2/stacks_denovo/{sample}.snps.tsv.gz",
-        "results/lib2/stacks_denovo/{sample}.alleles.tsv.gz",
-        "results/lib2/stacks_denovo/catalog.tags.tsv.gz",
-        "results/lib2/stacks_denovo/catalog.snps.tsv.gz",
-        "results/lib2/stacks_denovo/catalog.alleles.tsv.gz",
-        "results/lib2/stacks_denovo/catalog.sample_list.tsv.gz"
+        "results/WA_no_libs10and12/stacks_denovo/{sample}.tags.tsv.gz",
+        "results/WA_no_libs10and12/stacks_denovo/{sample}.snps.tsv.gz",
+        "results/WA_no_libs10and12/stacks_denovo/{sample}.alleles.tsv.gz",
+        "results/WA_no_libs10and12/stacks_denovo/catalog.tags.tsv.gz",
+        "results/WA_no_libs10and12/stacks_denovo/catalog.snps.tsv.gz",
+        "results/WA_no_libs10and12/stacks_denovo/catalog.alleles.tsv.gz",
+        "results/WA_no_libs10and12/stacks_denovo/catalog.sample_list.tsv.gz"
     output:
-        "results/lib2/stacks_denovo/{sample}.matches.tsv.gz"
+        "results/WA_no_libs10and12/stacks_denovo/{sample}.matches.tsv.gz"
     params:
         popmap=config["popmap"],
     conda:
@@ -21,11 +21,11 @@ rule sstacks:
         qos="long",
         time="72:00:00"
     log:
-        "results/lib2/logs/stacks_denovo/sstacks/{sample}.log"
+        "results/WA_no_libs10and12/logs/stacks_denovo/sstacks/{sample}.log"
     benchmark:
-        "results/lib2/benchmarks/stacks_denovo/sstacks/{sample}.bmk"
+        "results/WA_no_libs10and12/benchmarks/stacks_denovo/sstacks/{sample}.bmk"
     shell:
         " (sstacks				"
-        " -P results/lib2/stacks_denovo/	"
-        " -M rapr-ddrad-smk-alpine/data/popmap_lib2_by_sample/popmap_lib2_{wildcards.sample}.tsv -p 24)		"
+        " -P results/WA_no_libs10and12/stacks_denovo/	"
+        " -M rapr-ddrad-smk-alpine/data/popmap_WA_no_libs10and12_by_sample/popmap_WA_no_libs10and12_{wildcards.sample}.tsv -p 24)		"
         " 2> {log}				"

@@ -3,14 +3,14 @@
 
 rule tsv2bam:
     input:
-        "results/lib2/process_radtags/{sample}.2.fq.gz",
-        "results/lib2/stacks_denovo/{sample}.matches.tsv.gz",
-        "results/lib2/stacks_denovo/catalog.tags.tsv.gz",
-        "results/lib2/stacks_denovo/catalog.snps.tsv.gz",
-        "results/lib2/stacks_denovo/catalog.alleles.tsv.gz",
-        "results/lib2/stacks_denovo/catalog.sample_list.tsv.gz"
+        "results/WA_no_libs10and12/process_radtags/{sample}.2.fq.gz",
+        "results/WA_no_libs10and12/stacks_denovo/{sample}.matches.tsv.gz",
+        "results/WA_no_libs10and12/stacks_denovo/catalog.tags.tsv.gz",
+        "results/WA_no_libs10and12/stacks_denovo/catalog.snps.tsv.gz",
+        "results/WA_no_libs10and12/stacks_denovo/catalog.alleles.tsv.gz",
+        "results/WA_no_libs10and12/stacks_denovo/catalog.sample_list.tsv.gz"
     output:
-        "results/lib2/stacks_denovo/{sample}.matches.bam"
+        "results/WA_no_libs10and12/stacks_denovo/{sample}.matches.bam"
     params:
         popmap=config["popmap"],
     conda:
@@ -20,12 +20,12 @@ rule tsv2bam:
         mem_mb=89760,
         time="24:00:00"
     log:
-        "results/lib2/logs/stacks_denovo/tsv2bam/{sample}.log"
+        "results/WA_no_libs10and12/logs/stacks_denovo/tsv2bam/{sample}.log"
     benchmark:
-        "results/lib2/benchmarks/stacks_denovo/tsv2bam/{sample}.bmk"
+        "results/WA_no_libs10and12/benchmarks/stacks_denovo/tsv2bam/{sample}.bmk"
     shell:
         " (tsv2bam				"
-        " -P results/lib2/stacks_denovo/	"
-        " -R results/lib2/process_radtags/   	"
-        " -M rapr-ddrad-smk-alpine/data/popmap_lib2_by_sample/popmap_lib2_{wildcards.sample}.tsv -t 24) 		"
+        " -P results/WA_no_libs10and12/stacks_denovo/	"
+        " -R results/WA_no_libs10and12/process_radtags/   	"
+        " -M rapr-ddrad-smk-alpine/data/popmap_WA_no_libs10and12_by_sample/popmap_WA_no_libs10and12_{wildcards.sample}.tsv -t 24) 		"
         " 2> {log}				"
