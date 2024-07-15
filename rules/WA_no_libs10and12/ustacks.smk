@@ -10,8 +10,8 @@ rule ustacks:
     conda:
         "stacks-2.65"
     resources:
-        cpus=64,
-        mem_mb=239360,
+        cpus=48,
+        mem_mb=179520,
         qos="long",
         time="72:00:00"
     log:
@@ -21,6 +21,6 @@ rule ustacks:
     shell:
         " (ustacks -f {input.R1}			"
         " -o results/WA_no_libs10and12/ustacks/		"
-        " -m 3 -M 2 -d -t gzfastq -p 64			"
+        " -m 3 -M 2 -d -t gzfastq -p 48			"
         " --model_type bounded --bound_high 0.05)	"
         "  2> {log}					"
