@@ -27,5 +27,5 @@ rule tsv2bam:
         " (tsv2bam				"
         " -P results/WA_no_libs10and12/stacks_denovo/	"
         " -R results/WA_no_libs10and12/process_radtags/   	"
-        " -M rapr-ddrad-smk-alpine/data/popmap_WA_no_libs10and12_by_sample/popmap_WA_no_libs10and12_{wildcards.sample}.tsv -t 24) 		"
+        " -M rapr-ddrad-smk-alpine/data/popmap_WA_no_libs10and12_vs2_by_sample/popmap_WA_no_libs10and12_vs2_{wildcards.sample}.tsv -t 24) 		"
         " 2> {log}				"

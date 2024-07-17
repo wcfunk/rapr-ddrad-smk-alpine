@@ -26,5 +26,5 @@ rule sstacks:
     shell:
         " (sstacks				"
         " -P results/WA_no_libs10and12/stacks_denovo/	"
-        " -M rapr-ddrad-smk-alpine/data/popmap_WA_no_libs10and12_by_sample/popmap_WA_no_libs10and12_{wildcards.sample}.tsv -p 24)		"
+        " -M rapr-ddrad-smk-alpine/data/popmap_WA_no_libs10and12_vs2_by_sample/popmap_WA_no_libs10and12_vs2_{wildcards.sample}.tsv -p 24)		"
         " 2> {log}				"
