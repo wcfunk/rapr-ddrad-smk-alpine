@@ -27,5 +27,5 @@ rule cstacks:
     shell:
         " (cstacks				"
         " -P results/WA_no_libs10and12/stacks_denovo/	"
-        " -M rapr-ddrad-smk-alpine/data/popmap_WA_no_libs10and12_cstacks.tsv			"
+        " -M rapr-ddrad-smk-alpine/data/popmap_WA_no_libs10and12_cstacks_vs2.tsv			"
         " -n 3 -p 24) 2> {log}			"
