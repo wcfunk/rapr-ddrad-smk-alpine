@@ -1,0 +1,18 @@
+configfile: "rapr-ddrad-smk-alpine/config/config_rapr_raau_raca.yaml"
+
+include: "../rules/rapr_raau_raca/common.smk"
+
+include: "../rules/rapr_raau_raca/clone_filter.smk"
+
+include: "../rules/rapr_raau_raca/process_radtags.smk"
+include: "../rules/rapr_raau_raca/rename_fastqs.smk"
+
+# Stacks de novo pipeline
+include: "../rules/rapr_raau_raca/ustacks.smk"
+include: "../rules/rapr_raau_raca/rename_ustacks.smk"
+include: "../rules/rapr_raau_raca/cstacks.smk"
+include: "../rules/rapr_raau_raca/sstacks.smk"
+include: "../rules/rapr_raau_raca/tsv2bam.smk"
+include: "../rules/rapr_raau_raca/gstacks.smk"
+
+include: "../rules/rapr_raau_raca/populations.smk"

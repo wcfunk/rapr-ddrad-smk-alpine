@@ -1,8 +1,8 @@
-# Alpine slurm config file for entire dataset (osf_rangewide)
+# Alpine slurm config file for entire dataset for all three species (Rana pretiosa, R. aurora, and R. cascadae)
 
 executor: cluster-generic
 cluster-generic-submit-cmd:
-  mkdir -p results/osf_rangewide/slurm_logs/{rule} &&
+  mkdir -p results/rapr_raau_raca/slurm_logs/{rule} &&
   sbatch
     --account=csu89_alpine1
     --partition=amilan
@@ -11,8 +11,8 @@ cluster-generic-submit-cmd:
     --time={resources.time}
     --qos={resources.qos}
     --job-name=smk-{rule}-{wildcards}
-    --output=results/osf_rangewide/slurm_logs/{rule}/{rule}-%j-{wildcards}.out
-    --error=results/osf_rangewide/slurm_logs/{rule}/{rule}-%j-{wildcards}.err
+    --output=results/rapr_raau_raca/slurm_logs/{rule}/{rule}-%j-{wildcards}.out
+    --error=results/rapr_raau_raca/slurm_logs/{rule}/{rule}-%j-{wildcards}.err
     --parsable
 cluster-generic-status-cmd: status-sacct-robust.sh
 cluster-generic-cancel-cmd: scancel
@@ -21,7 +21,7 @@ default-resources:
   - time="08:00:00"
   - mem_mb=3740
   - qos="normal"
-  - tmpdir="results/osf_rangewide/snake-tmp"
+  - tmpdir="results/rapr_raau_raca/snake-tmp"
 restart-times: 0
 max-jobs-per-second: 10
 max-status-checks-per-second: 50
