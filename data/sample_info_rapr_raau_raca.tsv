@@ -889,7 +889,7 @@ lib07	1	OSF_E430	fastqs/lib07/OSF_E430_1.fq.gz	fastqs/lib07/OSF_E430_2.fq.gz
 lib07	1	OSF_E431	fastqs/lib07/OSF_E431_1.fq.gz	fastqs/lib07/OSF_E431_2.fq.gz
 lib07	1	OSF_E432	fastqs/lib07/OSF_E432_1.fq.gz	fastqs/lib07/OSF_E432_2.fq.gz
 lib07	1	CAP_MEXC_B02	fastqs/lib07/CAP_MEXC_B02_1.fq.gz	fastqs/lib07/CAP_MEXC_B02_2.fq.gz
-lib07	1	CAP_MEXC_C03	fastqs/lib07/CAP_MEXC_C03_1.fq.gz	fastqs/lib07/CAP_MEXC_C03_2.fq.gz
+lib07	1	CAP_MEXC_C03_R	fastqs/lib07/CAP_MEXC_C03_R_1.fq.gz	fastqs/lib07/CAP_MEXC_C03_R_2.fq.gz
 lib07	1	CAP_MEXC_D02	fastqs/lib07/CAP_MEXC_D02_1.fq.gz	fastqs/lib07/CAP_MEXC_D02_2.fq.gz
 lib07	1	CAP_MEXC_E03	fastqs/lib07/CAP_MEXC_E03_1.fq.gz	fastqs/lib07/CAP_MEXC_E03_2.fq.gz
 lib07	1	CAP_MEXC_F03	fastqs/lib07/CAP_MEXC_F03_1.fq.gz	fastqs/lib07/CAP_MEXC_F03_2.fq.gz
