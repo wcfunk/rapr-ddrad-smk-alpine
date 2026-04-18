@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 #IMPORTANT: THIS SBATCH JOB MUST BE RUN FROM PARENT DIRECTORY OF RAPR-DDRAD-SMK-ALPINE
+#IMPORTANT: FASTQS MUST BE IN PARENT DIRECTORY OF RAPR-DDRAD-SMK-ALPINE TOO
 #
 #all commands that start with SBATCH contain commands that are just used by SLURM for scheduling
 #################
