@@ -27,4 +27,4 @@ rule process_radtags:
         " -1 {input.in1} -2 {input.in2}  "
         " -o results/rapr_raau_raca/process_radtags/  "
         " --renz-1 {params.enz1} --renz-2 {params.enz2}  "
-        " -c -q -r) 2> {log}  "
+        " -t 90 -c -q -r) 2> {log}  "
