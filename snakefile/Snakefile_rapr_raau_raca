@@ -1,8 +1,8 @@
 configfile: "rapr-ddrad-smk-alpine/config/config_rapr_raau_raca.yaml"
 
-include: "../rules/rapr_raau_raca/common.smk"
+#include: "../rules/rapr_raau_raca/common.smk"
 
-include: "../rules/rapr_raau_raca/clone_filter.smk"
+#include: "../rules/rapr_raau_raca/clone_filter.smk"
 
 include: "../rules/rapr_raau_raca/process_radtags.smk"
 include: "../rules/rapr_raau_raca/rename_fastqs.smk"
