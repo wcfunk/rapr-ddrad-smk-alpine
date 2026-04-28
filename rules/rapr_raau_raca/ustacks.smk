@@ -21,6 +21,6 @@ rule ustacks:
     shell:
         " (ustacks -f {input.R1}			"
         " -o results/rapr_raau_raca/ustacks/		"
-        " -m 3 -M 2 -d -t gzfastq -p 48			"
+        " -m 3 -M 2 --deleverage -i gzfastq -t 48			"
         " --model_type bounded --bound_high 0.05)	"
         "  2> {log}					"
