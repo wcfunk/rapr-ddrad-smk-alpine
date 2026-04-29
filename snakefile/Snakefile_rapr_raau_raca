@@ -2,10 +2,14 @@ configfile: "rapr-ddrad-smk-alpine/config/config_rapr_raau_raca.yaml"
 
 include: "../rules/rapr_raau_raca/common.smk"
 
-#include: "../rules/rapr_raau_raca/clone_filter.smk"
+# Don't include clone_filter.smk if decided to run preprocess_ddradtags_array.sh instead
+# include: "../rules/rapr_raau_raca/clone_filter.smk"
 
 include: "../rules/rapr_raau_raca/process_radtags.smk"
 include: "../rules/rapr_raau_raca/rename_fastqs.smk"
+
+# Include rename_fastqs_all.smk if want to first generate all results from process_radtags.smk and rename_fastqs.smk to determine number of reads per sample to deciding which to include in cstacks popmap
+include: "../rules/rapr_raau_raca/rename_fastqs_all.smk"
 
 # Stacks de novo pipeline
 include: "../rules/rapr_raau_raca/ustacks.smk"
