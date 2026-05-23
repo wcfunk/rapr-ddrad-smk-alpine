@@ -26,4 +26,4 @@ rule populations:
         " --write-random-snp 			"
         " --fstats --hwe --genepop --vcf	"
         " -t 24)				"
-        " 2> {log}				"
+        " 2> {log}			"
