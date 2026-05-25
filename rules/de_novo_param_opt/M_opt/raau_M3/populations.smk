@@ -7,14 +7,16 @@ rule populations:
         "results/de_novo_param_opt/M_opt/raau_M3/stacks_denovo/catalog.calls"
     output:
         "results/de_novo_param_opt/M_opt/raau_M3/populations/populations.snps.vcf"
-    threads: 24
+    threads: 12
     resources:
-        mem_mb=89760,
-        time="24:00:00"
+        mem_mb=44880,
+        time="12:00:00"
     conda:
         "stacks2.68-3"
     log:
         "results/de_novo_param_opt/M_opt/raau_M3/logs/populations/populations.log"
+    benchmark:
+        "results/de_novo_param_opt/M_opt/raau_M3/benchmarks/populations/populations.bmk"
     shell:
         " (populations				"
         " -P results/de_novo_param_opt/M_opt/raau_M3/stacks_denovo/ 	"

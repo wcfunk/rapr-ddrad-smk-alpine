@@ -21,11 +21,11 @@ rule cstacks:
         "results/de_novo_param_opt/M_opt/raau_M3/stacks_denovo/catalog.sample_list.tsv.gz"
     conda:
         "stacks2.68-3"
-    threads: 24
+    threads: 12
     resources:
-        mem_mb=89760,
+        mem_mb=44880,
         qos="normal",
-        time="24:00:00"
+        time="4:00:00"
     log:
         "results/de_novo_param_opt/M_opt/raau_M3/logs/stacks_denovo/cstacks/cstacks.log"
     benchmark:

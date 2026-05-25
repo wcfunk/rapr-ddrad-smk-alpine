@@ -17,10 +17,10 @@ rule gstacks:
         "results/de_novo_param_opt/M_opt/raau_M3/stacks_denovo/catalog.calls"
     conda:
         "stacks2.68-3"
-    threads: 24
+    threads: 4
     resources:
-        mem_mb=89760,
-        time="24:00:00"
+        mem_mb=14960,
+        time="1:00:00"
     log:
         "results/de_novo_param_opt/M_opt/raau_M3/logs/stacks_denovo/gstacks/gstacks.log"
     benchmark:

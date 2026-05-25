@@ -1,0 +1,10 @@
+# Stacks de novo pipeline
+include: "../../../rules/de_novo_param_opt/M_opt/raau_M4/ustacks.smk"
+include: "../../../rules/de_novo_param_opt/M_opt/raau_M4/rename_ustacks.smk"
+include: "../../../rules/de_novo_param_opt/M_opt/raau_M4/cstacks.smk"
+include: "../../../rules/de_novo_param_opt/M_opt/raau_M4/sstacks.smk"
+include: "../../../rules/de_novo_param_opt/M_opt/raau_M4/tsv2bam.smk"
+include: "../../../rules/de_novo_param_opt/M_opt/raau_M4/gstacks.smk"
+
+# Populations
+include: "../../../rules/de_novo_param_opt/M_opt/raau_M4/populations.smk"

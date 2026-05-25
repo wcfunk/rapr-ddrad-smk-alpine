@@ -13,10 +13,10 @@ rule tsv2bam:
         "results/de_novo_param_opt/M_opt/raau_M3/stacks_denovo/{sample}.matches.bam"
     conda:
         "stacks2.68-3"
-    threads: 24
+    threads: 8
     resources:
-        mem_mb=89760,
-        time="3:00:00"
+        mem_mb=29920,
+        time="1:00:00"
     log:
         "results/de_novo_param_opt/M_opt/raau_M3/logs/stacks_denovo/tsv2bam/{sample}.log"
     benchmark:

@@ -6,13 +6,13 @@
 #all commands that start with SBATCH contain commands that are just used by SLURM for scheduling
 #################
 #set a job name
-#SBATCH --job-name=snakemake
+#SBATCH --job-name=snakemake_raau_M3
 #################
 #a file for job output, you can check job progress
-#SBATCH --output=snake.%j.out
+#SBATCH --output=snake_raau_M3.%j.out
 #################
 # a file for errors from the job
-#SBATCH --error=snake.%j.err
+#SBATCH --error=snake_raau_M3.%j.err
 #################
 #time you think you need; default is one hour
 #in minutes in this case

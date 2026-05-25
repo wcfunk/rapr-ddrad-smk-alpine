@@ -16,7 +16,7 @@ rule sstacks:
     threads: 24
     resources:
         mem_mb=89760,
-        time="24:00:00"
+        time="1:00:00"
     log:
         "results/de_novo_param_opt/M_opt/raau_M3/logs/stacks_denovo/sstacks/{sample}.log"
     benchmark:

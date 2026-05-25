@@ -1,0 +1,10 @@
+# Stacks de novo pipeline
+include: "../../../rules/de_novo_param_opt/M_opt/raca_M5/ustacks.smk"
+include: "../../../rules/de_novo_param_opt/M_opt/raca_M5/rename_ustacks.smk"
+include: "../../../rules/de_novo_param_opt/M_opt/raca_M5/cstacks.smk"
+include: "../../../rules/de_novo_param_opt/M_opt/raca_M5/sstacks.smk"
+include: "../../../rules/de_novo_param_opt/M_opt/raca_M5/tsv2bam.smk"
+include: "../../../rules/de_novo_param_opt/M_opt/raca_M5/gstacks.smk"
+
+# Populations
+include: "../../../rules/de_novo_param_opt/M_opt/raca_M5/populations.smk"
