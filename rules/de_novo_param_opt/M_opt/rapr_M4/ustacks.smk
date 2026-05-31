@@ -9,9 +9,9 @@ rule ustacks:
         alleles1="results/de_novo_param_opt/M_opt/rapr_M4/ustacks/{sample}.1.alleles.tsv.gz"
     conda:
         "stacks2.68-3"
-    threads: 32
+    threads: 48
     resources:
-        mem_mb=119680,
+        mem_mb=179520,
         qos="normal",
         time="24:00:00"
     log:
@@ -21,6 +21,6 @@ rule ustacks:
     shell:
         " (ustacks -f {input.R1}			"
         " -o results/de_novo_param_opt/M_opt/rapr_M4/ustacks/		"
-        " -m 3 -M 3 --deleverage -t gzfastq -p {threads}			"
+        " -m 3 -M 4 --deleverage -t gzfastq -p {threads}			"
         " --model_type bounded --bound_high 0.05)	"
         "  2> {log}					"

@@ -9,9 +9,9 @@ rule ustacks:
         alleles1="results/de_novo_param_opt/M_opt/rapr_M3/ustacks/{sample}.1.alleles.tsv.gz"
     conda:
         "stacks2.68-3"
-    threads: 32
+    threads: 48
     resources:
-        mem_mb=119680,
+        mem_mb=179520,
         qos="normal",
         time="24:00:00"
     log:

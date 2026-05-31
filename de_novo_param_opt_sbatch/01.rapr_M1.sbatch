@@ -16,10 +16,10 @@
 #################
 #time you think you need; default is one hour
 #in minutes in this case
-#SBATCH -t 24:00:00
+#SBATCH -t 48:00:00
 #################
 #quality of service; think of it as job priority
-#SBATCH --qos=normal
+#SBATCH --qos=long
 #SBATCH -p amilan
 #SBATCH --account=csu89_alpine1
 #################

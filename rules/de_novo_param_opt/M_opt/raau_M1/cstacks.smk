@@ -34,4 +34,4 @@ rule cstacks:
         " (cstacks				"
         " -P results/de_novo_param_opt/M_opt/raau_M1/stacks_denovo/	"
         " -M rapr-ddrad-smk-alpine/data/popmap_dnpo_raau.tsv			"
-        " -n 3 -p {threads}) 2> {log}			"
+        " -n 1 -p {threads}) 2> {log}			"

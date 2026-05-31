@@ -74,8 +74,8 @@ rule cstacks:
     threads: 24
     resources:
         mem_mb=89760,
-        qos="normal",
-        time="24:00:00"
+        qos="long",
+        time="3-00:00:00"
     log:
         "results/de_novo_param_opt/M_opt/rapr_M1/logs/stacks_denovo/cstacks/cstacks.log"
     benchmark:
@@ -84,4 +84,4 @@ rule cstacks:
         " (cstacks				"
         " -P results/de_novo_param_opt/M_opt/rapr_M1/stacks_denovo/	"
         " -M rapr-ddrad-smk-alpine/data/popmap_dnpo_rapr.tsv			"
-        " -n 3 -p {threads}) 2> {log}			"
+        " -n 1 -p {threads}) 2> {log}			"

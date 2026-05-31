@@ -21,6 +21,6 @@ rule ustacks:
     shell:
         " (ustacks -f {input.R1}			"
         " -o results/de_novo_param_opt/M_opt/raca_M2/ustacks/		"
-        " -m 3 -M 3 --deleverage -t gzfastq -p {threads}			"
+        " -m 3 -M 2 --deleverage -t gzfastq -p {threads}			"
         " --model_type bounded --bound_high 0.05)	"
         "  2> {log}					"
