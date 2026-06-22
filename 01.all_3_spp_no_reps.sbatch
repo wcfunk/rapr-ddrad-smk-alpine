@@ -44,5 +44,5 @@ set -x
 source ~/.bashrc
 conda activate snakemake8.26.0
 
-snakemake -p -s rapr-ddrad-smk-alpine/snakefile/Snakefile_all_3_spp_no_reps --profile rapr-ddrad-smk-alpine/slurm_config/all_3_spp_no_reps/ results/rapr_raau_raca/populations/populations.snps.vcf
-#snakemake -p -s rapr-ddrad-smk-alpine/snakefile/Snakefile_all_3_spp_no_reps --profile rapr-ddrad-smk-alpine/slurm_config/all_3_spp_no_reps/ results/rapr_raau_raca/populations/populations.snps.vcf
+snakemake -p -s rapr-ddrad-smk-alpine/snakefile/Snakefile_all_3_spp_no_reps --profile rapr-ddrad-smk-alpine/slurm_config/all_3_spp_no_reps/ results/rapr_raau_raca/all_3_spp_no_reps/populations/populations.snps.vcf
+#snakemake -p -s rapr-ddrad-smk-alpine/snakefile/Snakefile_all_3_spp_no_reps --profile rapr-ddrad-smk-alpine/slurm_config/all_3_spp_no_reps/ results/rapr_raau_raca/all_3_spp_no_reps/populations/populations.snps.vcf

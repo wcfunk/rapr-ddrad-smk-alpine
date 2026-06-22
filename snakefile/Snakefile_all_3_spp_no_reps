@@ -13,11 +13,15 @@ include: "../rules/rapr_raau_raca/common.smk"
 # include: "../rules/rapr_raau_raca/rename_fastqs_all.smk"
 
 # Stacks de novo pipeline
-include: "../rules/rapr_raau_raca/ustacks.smk"
-include: "../rules/rapr_raau_raca/rename_ustacks.smk"
-include: "../rules/rapr_raau_raca/cstacks.smk"
-include: "../rules/rapr_raau_raca/sstacks.smk"
-include: "../rules/rapr_raau_raca/tsv2bam.smk"
-include: "../rules/rapr_raau_raca/gstacks.smk"
+include: "../rules/rapr_raau_raca/all_3_spp_no_reps/ustacks.smk"
+include: "../rules/rapr_raau_raca/all_3_spp_no_reps/rename_ustacks.smk"
 
-include: "../rules/rapr_raau_raca/populations.smk"
+# Not including cstacks.smk, because already ran it in de novo parameter optimization
+# include: "../rules/rapr_raau_raca/all_3_spp_no_reps/cstacks.smk"
+
+# Stacks de novo pipeline continued
+include: "../rules/rapr_raau_raca/all_3_spp_no_reps/sstacks.smk"
+include: "../rules/rapr_raau_raca/all_3_spp_no_reps/tsv2bam.smk"
+include: "../rules/rapr_raau_raca/all_3_spp_no_reps/gstacks.smk"
+
+include: "../rules/rapr_raau_raca/all_3_spp_no_reps/populations.smk"

@@ -1,8 +1,8 @@
-# Alpine slurm config file for de_novo_parameter_optimization, n_opt, all_3_spp_n5
+# Alpine slurm config file for all 3 spp (rapr, raau, raca), no replicate samples
 
 executor: cluster-generic
 cluster-generic-submit-cmd:
-  mkdir -p results/rapr_raau_raca/slurm_logs/{rule} &&
+  mkdir -p results/rapr_raau_raca/all_3_spp_no_reps/slurm_logs/{rule} &&
   sbatch
     --account=csu89_alpine1
     --partition=amilan
@@ -11,8 +11,8 @@ cluster-generic-submit-cmd:
     --time={resources.time}
     --qos={resources.qos}
     --job-name=smk-{rule}-{wildcards}
-    --output=results/rapr_raau_raca/slurm_logs/{rule}/{rule}-%j-{wildcards}.out
-    --error=results/rapr_raau_raca/slurm_logs/{rule}/{rule}-%j-{wildcards}.err
+    --output=results/rapr_raau_raca/all_3_spp_no_reps/slurm_logs/{rule}/{rule}-%j-{wildcards}.out
+    --error=results/rapr_raau_raca/all_3_spp_no_reps/slurm_logs/{rule}/{rule}-%j-{wildcards}.err
     --parsable
 cluster-generic-status-cmd: status-sacct-robust.sh
 cluster-generic-cancel-cmd: scancel
@@ -21,7 +21,7 @@ default-resources:
   - time="08:00:00"
   - mem_mb=3740
   - qos="normal"
-  - tmpdir="results/rapr_raau_raca/snake-tmp"
+  - tmpdir="results/rapr_raau_raca/all_3_spp_no_reps/snake-tmp"
 restart-times: 0
 max-jobs-per-second: 10
 max-status-checks-per-second: 50
