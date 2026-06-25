@@ -17,9 +17,9 @@ rule gstacks:
         "results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/catalog.calls"
     conda:
         "stacks2.68-3"
-    threads: 24
+    threads: 48
     resources:
-        mem_mb=89760,
+        mem_mb=179520,
         time="12:00:00"
     log:
         "results/rapr_raau_raca/all_3_spp_no_reps/logs/stacks_denovo/gstacks/gstacks.log"
