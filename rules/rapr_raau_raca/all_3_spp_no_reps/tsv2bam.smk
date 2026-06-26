@@ -10,7 +10,7 @@ rule tsv2bam:
         "results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/catalog.alleles.tsv.gz",
         "results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/catalog.sample_list.tsv.gz"
     output:
-        "results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/{sample}.matches.bam"
+        "results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/{sample}.matches.original.bam"
     conda:
         "stacks2.68-3"
     threads: 8

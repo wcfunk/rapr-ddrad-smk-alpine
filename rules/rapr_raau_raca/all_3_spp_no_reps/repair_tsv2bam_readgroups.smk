@@ -17,10 +17,10 @@
 
 rule repair_tsv2bam_readgroups:
     input:
-        bam="results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/{sample}.matches.bam"
+        bam="results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/{sample}.matches.original.bam"
 
     output:
-        bam="results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/{sample}.matches.uniqueRG.bam"
+        bam="results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/{sample}.matches.bam"
 
     conda:
         "stacks2.68-3"
