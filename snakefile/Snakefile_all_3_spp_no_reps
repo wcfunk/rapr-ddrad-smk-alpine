@@ -22,6 +22,11 @@ include: "../rules/rapr_raau_raca/all_3_spp_no_reps/rename_ustacks.smk"
 # Stacks de novo pipeline continued
 include: "../rules/rapr_raau_raca/all_3_spp_no_reps/sstacks.smk"
 include: "../rules/rapr_raau_raca/all_3_spp_no_reps/tsv2bam.smk"
+
+# This rule makes sure each .bam file produced by tsv2bam.smk has a unique read group ID
+include: "../rules/rapr_raau_raca/all_3_spp_no_reps/repair_tsv2bam_readgroups.smk"
+
+# Stacks de novo pipeline continued
 include: "../rules/rapr_raau_raca/all_3_spp_no_reps/gstacks.smk"
 
 include: "../rules/rapr_raau_raca/all_3_spp_no_reps/populations.smk"

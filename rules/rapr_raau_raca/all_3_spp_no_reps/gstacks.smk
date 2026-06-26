@@ -11,7 +11,7 @@ rule gstacks:
         "results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/catalog.alleles.tsv.gz",
         "results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/catalog.sample_list.tsv.gz",
         expand("results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/{s}.matches.tsv.gz", s=SAMPLES),
-        expand("results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/{s}.matches.bam", s=SAMPLES)
+        expand("results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/{s}.matches.uniqueRG.bam", s=SAMPLES)
     output:
         "results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/catalog.fa.gz",
         "results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/catalog.calls"
