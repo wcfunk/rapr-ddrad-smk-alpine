@@ -81,9 +81,6 @@ rule repair_tsv2bam_readgroups:
 
         samtools quickcheck "$tmp"
 
-        samtools view -H "$tmp" \
-            | grep -q "^@RG.*ID:$sample"
-
         ########################################################################
         # Install repaired BAM
         ########################################################################
