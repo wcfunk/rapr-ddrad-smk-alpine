@@ -1,0 +1,8 @@
+
+sample_info: "rapr-ddrad-smk-alpine/data/sample_info_gstacks_test.tsv"
+
+popmap: "rapr-ddrad-smk-alpine/data/popmap_gstacks_test.tsv"
+
+process_radtags:
+    enzyme1: ecoRI
+    enzyme2: nspI

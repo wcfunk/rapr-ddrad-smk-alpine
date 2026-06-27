@@ -1,0 +1,4 @@
+lib	unit	sample	fq1	fq2
+lib05	1	16AUG22RAPR1BEAV	fastqs/lib05/16AUG22RAPR1BEAV_1.fq.gz	fastqs/lib05/16AUG22RAPR1BEAV_2.fq.gz
+lib06	1	16AUG22RAPR1_UN	fastqs/lib06/16AUG22RAPR1_UN_1.fq.gz	fastqs/lib06/16AUG22RAPR1_UN_2.fq.gz
+lib06	1	12JUL22_WINOPEE_2	fastqs/lib06/12JUL22_WINOPEE_2_1.fq.gz	fastqs/lib06/12JUL22_WINOPEE_2_2.fq.gz

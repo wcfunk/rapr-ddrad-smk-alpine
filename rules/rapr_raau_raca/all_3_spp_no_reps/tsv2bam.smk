@@ -22,8 +22,15 @@ rule tsv2bam:
     benchmark:
         "results/rapr_raau_raca/all_3_spp_no_reps/benchmarks/stacks_denovo/tsv2bam/{sample}.bmk"
     shell:
-        " (tsv2bam				"
-        " -P results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/	"
-        " -R results/rapr_raau_raca/process_radtags/all_3_spp_no_dnpo_samples_or_reps/   	"
-        " -M rapr-ddrad-smk-alpine/data/popmap_all_3_spp_no_reps_by_sample/popmap_all_3_spp_no_reps_{wildcards.sample}.tsv -t {threads}) 		"
-        " 2> {log}				"
+        r"""
+        tsv2bam \
+            -P results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/ \
+            -R results/rapr_raau_raca/process_radtags/all_3_spp_no_dnpo_samples_or_reps/ \
+            -M rapr-ddrad-smk-alpine/data/popmap_all_3_spp_no_reps_by_sample/popmap_all_3_spp_no_reps_{wildcards.sample}.tsv \
+            -t {threads} \
+            2> {log}
+
+        mv \
+            results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/{wildcards.sample}.matches.bam \
+            {output}
+        """

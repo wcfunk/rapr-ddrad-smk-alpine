@@ -1,0 +1,32 @@
+configfile: "rapr-ddrad-smk-alpine/config/config_gstacks_test.yaml"
+
+include: "../rules/rapr_raau_raca/common.smk"
+
+# Don't include clone_filter.smk if run preprocess_ddradtags_array.sh instead
+# include: "../rules/rapr_raau_raca/clone_filter.smk"
+
+# Not including process_radtags.smk and rename_fastqs.smk because ran these prior to de novo parameter optimization
+# include: "../rules/rapr_raau_raca/process_radtags.smk"
+# include: "../rules/rapr_raau_raca/rename_fastqs.smk"
+
+# Include rename_fastqs_all.smk if want to first generate all results from process_radtags.smk and rename_fastqs.smk to determine number of reads per sample to decide which to include in cstacks popmap
+# include: "../rules/rapr_raau_raca/rename_fastqs_all.smk"
+
+# Stacks de novo pipeline
+#include: "../rules/rapr_raau_raca/all_3_spp_no_reps/ustacks.smk"
+#include: "../rules/rapr_raau_raca/all_3_spp_no_reps/rename_ustacks.smk"
+
+# Not including cstacks.smk, because already ran it in de novo parameter optimization
+# include: "../rules/rapr_raau_raca/all_3_spp_no_reps/cstacks.smk"
+
+# Stacks de novo pipeline continued
+#include: "../rules/rapr_raau_raca/all_3_spp_no_reps/sstacks.smk"
+#include: "../rules/rapr_raau_raca/all_3_spp_no_reps/tsv2bam.smk"
+
+# This rule makes sure each .bam file produced by tsv2bam.smk has a unique read group ID
+#include: "../rules/rapr_raau_raca/all_3_spp_no_reps/repair_tsv2bam_readgroups.smk"
+
+# Stacks de novo pipeline continued
+include: "../rules/rapr_raau_raca/all_3_spp_no_reps/gstacks_test.smk"
+
+#include: "../rules/rapr_raau_raca/all_3_spp_no_reps/populations.smk"
