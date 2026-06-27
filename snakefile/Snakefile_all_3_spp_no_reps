@@ -23,6 +23,16 @@ include: "../rules/rapr_raau_raca/all_3_spp_no_reps/rename_ustacks.smk"
 include: "../rules/rapr_raau_raca/all_3_spp_no_reps/sstacks.smk"
 include: "../rules/rapr_raau_raca/all_3_spp_no_reps/tsv2bam.smk"
 
+# This reads readgroup IDs prior to running repair_tsv2bam_readgroups.smk
+
+RG_IDS = {}
+
+with open("rapr-ddrad-smk-alpine/data/readgroup_IDs_all_3_spp_no_reps.tsv") as f:
+    for line in f:
+        if line.strip():
+            rgid, sample = line.strip().split()
+            RG_IDS[sample] = rgid
+
 # This rule makes sure each .bam file produced by tsv2bam.smk has a unique read group ID
 include: "../rules/rapr_raau_raca/all_3_spp_no_reps/repair_tsv2bam_readgroups.smk"
 

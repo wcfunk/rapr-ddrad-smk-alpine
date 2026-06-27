@@ -2,17 +2,8 @@
 # Repair duplicate read-group IDs produced by tsv2bam when run one sample at
 # a time.
 #
-# IMPORTANT:
-# tsv2bam assigns duplicate numeric read-group IDs when run with one-sample
-# population maps. gstacks requires globally unique read-group IDs, so this
-# rule replaces the RG IDs with the sample name.
-#
-# Replaces:
-#   @RG ID:<old>   -> ID:<sample>
-#   @RG id:<old>   -> id:<sample>
-#   RG:Z:<old>     -> RG:Z:<sample>
-#
-# Everything else is left unchanged.
+# Each sample is assigned a unique integer read-group ID using
+# data/readgroup_ids.tsv.
 ###############################################################################
 
 rule repair_tsv2bam_readgroups:
@@ -21,6 +12,9 @@ rule repair_tsv2bam_readgroups:
 
     output:
         bam="results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/{sample}.matches.bam"
+
+    params:
+        rgid=lambda wc: RG_IDS[wc.sample]
 
     conda:
         "stacks2.68-3"
@@ -41,22 +35,22 @@ rule repair_tsv2bam_readgroups:
         r"""
         set -euo pipefail
 
-        sample="{wildcards.sample}"
+        rgid="{params.rgid}"
         tmp="{output.bam}.tmp"
 
         samtools view -h {input.bam} \
-        | awk -v sample="$sample" '
+        | awk -v rgid="$rgid" '
             BEGIN {{ OFS="\t" }}
 
             ####################################################################
-            # Replace read-group ID(s) in header
+            # Replace read-group IDs in header
             ####################################################################
             /^@RG/ {{
                 for (i=1; i<=NF; i++) {{
                     if ($i ~ /^ID:/)
-                        $i = "ID:" sample
+                        $i = "ID:" rgid
                     else if ($i ~ /^id:/)
-                        $i = "id:" sample
+                        $i = "id:" rgid
                 }}
                 print
                 next
@@ -68,24 +62,16 @@ rule repair_tsv2bam_readgroups:
             {{
                 for (i=12; i<=NF; i++) {{
                     if ($i ~ /^RG:Z:/)
-                        $i = "RG:Z:" sample
+                        $i = "RG:Z:" rgid
                 }}
                 print
             }}
         ' \
         | samtools view -b -o "$tmp" -
 
-        ########################################################################
-        # Validate repaired BAM
-        ########################################################################
-
         samtools quickcheck "$tmp"
-
-        ########################################################################
-        # Install repaired BAM
-        ########################################################################
 
         mv "$tmp" {output.bam}
 
-        echo "Successfully repaired read groups for $sample." >> {log}
+        echo "Successfully repaired read groups using RG ID $rgid." >> {log}
         """
