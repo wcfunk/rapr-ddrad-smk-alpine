@@ -20,14 +20,17 @@ rule gstacks:
     threads: 48
     resources:
         mem_mb=179520,
-        time="12:00:00"
+        time="24:00:00"
     log:
         "results/rapr_raau_raca/all_3_spp_no_reps/logs/stacks_denovo/gstacks/gstacks.log"
     benchmark:
         "results/rapr_raau_raca/all_3_spp_no_reps/benchmarks/stacks_denovo/gstacks/gstacks.bmk"
     shell:
-        " (gstacks				"
-        " -P results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/	"
-        " -O results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/	"
-        " -M rapr-ddrad-smk-alpine/data/popmap_all_3_spp_no_reps.tsv -t {threads})		"
-        " 2> {log}				"
+        r"""
+        gstacks \
+            -P results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/ \
+            -O results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/ \
+            -M rapr-ddrad-smk-alpine/data/popmap_all_3_spp_no_reps.tsv \
+            -t {threads} \
+            > {log} 2>&1
+        """
