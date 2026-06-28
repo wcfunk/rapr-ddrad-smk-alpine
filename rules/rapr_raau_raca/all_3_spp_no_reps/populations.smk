@@ -7,9 +7,9 @@ rule populations:
         "results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/catalog.calls"
     output:
         "results/rapr_raau_raca/all_3_spp_no_reps/populations/populations.snps.vcf"
-    threads: 64
+    threads: 48
     resources:
-        mem_mb=239360,
+        mem_mb=179520,
         time="12:00:00"
     conda:
         "stacks2.68-3"
@@ -26,6 +26,5 @@ rule populations:
         " -p 1		"
         " -R 0.3		"
         " --min-mac 2			"
-        " --fstats			"
         " -t {threads})				"
         " 2> {log}			"
