@@ -27,6 +27,5 @@ rule populations:
         " -R 0.3		"
         " --min-mac 2			"
         " --fstats			"
-        " --log-fst-comp			"
         " -t {threads})				"
         " 2> {log}			"
