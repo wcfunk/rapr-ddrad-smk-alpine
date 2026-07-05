@@ -16,7 +16,9 @@ include: "../rules/rapr_raau_raca/common.smk"
 
 # Don't need to include ustacks.smk because already ran in all_3_spp_no_reps pipeline, so just using symbolic links
 # include: "../rules/rapr_raau_raca/all_3_spp_no_reps/ustacks.smk"
-include: "../rules/rapr_raau_raca/all_3_spp_no_reps/rename_ustacks.smk"
+
+# But DO need to include rename_ustacks.smk
+include: "../rules/rapr_raau_raca/rapr_no_reps/rename_ustacks.smk"
 
 # Not including cstacks.smk, because already ran it in de novo parameter optimization
 # include: "../rules/rapr_raau_raca/all_3_spp_no_reps/cstacks.smk"
