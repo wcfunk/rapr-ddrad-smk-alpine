@@ -1,5 +1,5 @@
 # Run populations. Calculate total number of loci, number of polymorphic loci, and 
-# number of variants when -r=0.80 (treating all individuals as a single population)
+# number of variants when -R=0.30 (treating all individuals as a single population)
 
 rule populations:
     input:

@@ -1,4 +1,4 @@
-configfile: "rapr-ddrad-smk-alpine/config/config_rapr_raau_raca.yaml"
+configfile: "rapr-ddrad-smk-alpine/config/config_rapr_no_reps.yaml"
 
 include: "../rules/rapr_raau_raca/common.smk"
 
