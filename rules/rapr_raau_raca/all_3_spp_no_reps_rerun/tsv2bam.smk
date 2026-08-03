@@ -31,6 +31,6 @@ rule tsv2bam:
             2> {log}
 
         mv \
-            results/rapr_raau_raca/all_3_spp_no_reps/stacks_denovo/{wildcards.sample}.matches.bam \
+            results/rapr_raau_raca/all_3_spp_no_reps_rerun/stacks_denovo/{wildcards.sample}.matches.bam \
             {output}
         """
