@@ -17,10 +17,10 @@ rule gstacks:
         "results/rapr_raau_raca/all_3_spp_no_reps_rerun/stacks_denovo/catalog.calls"
     conda:
         "stacks2.68-3"
-    threads: 48
+    threads: 64
     resources:
-        mem_mb=179520,
-        time="24:00:00"
+        mem_mb=239360,
+        time="48:00:00"
     log:
         "results/rapr_raau_raca/all_3_spp_no_reps_rerun/logs/stacks_denovo/gstacks/gstacks.log"
     benchmark:
