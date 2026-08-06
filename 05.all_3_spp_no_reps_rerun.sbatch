@@ -19,7 +19,7 @@
 #SBATCH -t 23:59:59
 #################
 #quality of service; think of it as job priority
-#SBATCH --qos=normal
+#SBATCH --qos=cpu-normal
 #SBATCH -p acpu
 #SBATCH --account=csu89_alpine1
 #################

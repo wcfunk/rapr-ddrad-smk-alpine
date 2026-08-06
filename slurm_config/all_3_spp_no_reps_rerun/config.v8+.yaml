@@ -20,7 +20,7 @@ cluster-generic-cancel-nargs: 4000
 default-resources:
   - time="08:00:00"
   - mem_mb=3740
-  - qos="normal"
+  - qos="cpu-normal"
   - tmpdir="results/rapr_raau_raca/all_3_spp_no_reps_rerun/snake-tmp"
 restart-times: 0
 max-jobs-per-second: 10
