@@ -20,7 +20,7 @@
 #################
 #quality of service; think of it as job priority
 #SBATCH --qos=normal
-#SBATCH -p amilan
+#SBATCH -p acpu
 #SBATCH --account=csu89_alpine1
 #################
 #number of nodes
