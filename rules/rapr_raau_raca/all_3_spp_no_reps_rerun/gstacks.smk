@@ -20,7 +20,7 @@ rule gstacks:
     threads: 64
     resources:
         mem_mb=239360,
-        time="48:00:00"
+        time="24:00:00"
     log:
         "results/rapr_raau_raca/all_3_spp_no_reps_rerun/logs/stacks_denovo/gstacks/gstacks.log"
     benchmark:
