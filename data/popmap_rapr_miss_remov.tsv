@@ -494,7 +494,6 @@ JME29AUG_9	Jack_Jameson
 JME30AUG_1	Jack_Jameson
 JME30AUG_3	Jack_Jameson
 JME30AUG_4	Jack_Jameson
-RAPRF_1_KC_19JUN19	KC
 BP15AUG17_01	Klamath_Refuge
 BP15AUG17_02	Klamath_Refuge
 BP16Aug17_01	Klamath_Refuge
@@ -593,10 +592,6 @@ USGS_212351	Lapine_SP
 USGS_212362	Lapine_SP
 CAP_RDMP_D01R	LDR_100_Rd_Mill_Pond
 CAP_RDMP_F01	LDR_100_Rd_Mill_Pond
-CAP_LDBO_D01	LDR_BLM_Oxbow
-CAP_CTMO_A01	LDR_Casey_Tract
-CAP_LHS_E01	LDR_Lapine_HS_Oxbow
-LCL11JUL19_1_RAPR_F	Little_Cultus_Lk
 16AUG22RAPR1BEAV	Mink_Lk
 18AUG22BEAVRAPR10	Mink_Lk
 18AUG22BEAVRAPR15	Mink_Lk
@@ -829,7 +824,6 @@ OSF_E395	SPS_Wildlife_Area
 OSF_E396	SPS_Wildlife_Area
 OSF_E397	SPS_Wildlife_Area
 OSF_E398	SPS_Wildlife_Area
-SUNCRRAPR120Sept22	Sun_Creek
 CAP_SRFW_A01	Sunriver
 CAP_SRFW_B01	Sunriver
 CAP_SRFW_C01	Sunriver
@@ -949,7 +943,6 @@ USGS_221725	Upp_Deschutes
 221605	Upper_Williamson_River
 221321	Upper_Williamson_River
 221333	Upper_Williamson_River
-Winopee_1_12JUL22	Winopee_Lake
 WRBS_A02	Wood_R_Canal
 WRBS_B01	Wood_R_Canal
 WRBS_C02_CAP	Wood_R_Canal
