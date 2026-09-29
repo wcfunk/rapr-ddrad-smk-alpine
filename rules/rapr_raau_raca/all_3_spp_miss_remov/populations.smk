@@ -6,7 +6,7 @@ rule populations:
         "results/rapr_raau_raca/all_3_spp_no_reps_rerun/stacks_denovo/catalog.fa.gz",
         "results/rapr_raau_raca/all_3_spp_no_reps_rerun/stacks_denovo/catalog.calls"
     output:
-        "results/rapr_raau_raca/all_3_spp_no_reps_rerun/populations/populations.snps.vcf"
+        "results/rapr_raau_raca/all_3_spp_miss_remov/populations/populations.snps.vcf"
     threads: 48
     resources:
         mem_mb=179520,
@@ -14,17 +14,18 @@ rule populations:
     conda:
         "stacks2.68-3"
     log:
-        "results/rapr_raau_raca/all_3_spp_no_reps_rerun/logs/populations/populations.log"
+        "results/rapr_raau_raca/all_3_spp_miss_remov/logs/populations/populations.log"
     benchmark:
-        "results/rapr_raau_raca/all_3_spp_no_reps_rerun/benchmarks/populations/populations.bmk"
+        "results/rapr_raau_raca/all_3_spp_miss_remov/benchmarks/populations/populations.bmk"
     shell:
         " (populations				"
         " -P results/rapr_raau_raca/all_3_spp_no_reps_rerun/stacks_denovo/ 	"
-        " -O results/rapr_raau_raca/all_3_spp_no_reps_rerun/populations/ 		"
-        " -M rapr-ddrad-smk-alpine/data/popmap_all_3_spp_no_reps_rerun.tsv			" 
+        " -O results/rapr_raau_raca/all_3_spp_miss_remov/populations/ 		"
+        " -M rapr-ddrad-smk-alpine/data/popmap_all_3_spp_miss_remov.tsv			" 
         " --vcf			"
         " -p 1		"
-        " -R 0.3		"
+        " -r 0.5		"
         " --min-mac 2			"
+        " --write-single-snp			"
         " -t {threads})				"
         " 2> {log}			"
