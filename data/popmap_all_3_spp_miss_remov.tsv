@@ -155,12 +155,12 @@ USGS_211958	Buck_Lk
 USGS_212263	Buck_Lk
 USGS_212180	Buck_Lk
 USGS_212197	Buck_Lk
-220677	Camas_Pr
-220730	Camas_Pr
-220848	Camas_Pr
-220870	Camas_Pr
-220892	Camas_Pr
-220900	Camas_Pr
+220677	Camas_Prairie
+220730	Camas_Prairie
+220848	Camas_Prairie
+220870	Camas_Prairie
+220892	Camas_Prairie
+220900	Camas_Prairie
 USGS_220141	Camas_Prairie
 USGS_220182	Camas_Prairie
 USGS_220689	Camas_Prairie
@@ -659,7 +659,6 @@ OSF_E4	Potter_Rd
 OSF_E5	Potter_Rd
 OSF_E6	Potter_Rd
 OSF_E7	Potter_Rd
-OSF_ERAAU_1	U_Dempsey_Cr
 17AUG22BEAVERRACA3	RACA_Mink_Lk
 18AUG22BEAV_RACA_1	RACA_Mink_Lk
 BEAVER_RACA_2	RACA_Mink_Lk
@@ -930,6 +929,7 @@ OSF_E409	Trout_Lk
 OSF_E418	Trout_Lk
 OSF_E411	Trout_Lk
 OSF_E412	Trout_Lk
+OSF_ERAAU_1	U_Dempsey_Cr
 OSF_ERAAU_2	U_Dempsey_Cr
 OSF_ERAAU_3	U_Dempsey_Cr
 OSF_ERAAU_4	U_Dempsey_Cr

@@ -23,7 +23,7 @@ rule populations:
         " -O results/rapr_raau_raca/all_3_spp_miss_remov/populations/ 		"
         " -M rapr-ddrad-smk-alpine/data/popmap_all_3_spp_miss_remov.tsv			" 
         " --vcf			"
-        " -p 1		"
+        " -p 57		"
         " -r 0.5		"
         " --min-mac 2			"
         " --write-single-snp			"
